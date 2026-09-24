@@ -1,0 +1,396 @@
+{
+  "prompt_meta": {
+    "version": "1.0",
+    "type": "professional_web_project_specification",
+    "language": "hy-AM",
+    "target": "AI Code Generator / Senior Full-Stack Developer",
+    "project_codename": "YvnBet"
+  },
+
+  "role_definition": {
+    "persona": "Senior Full-Stack Web Developer & UI/UX Designer with 10+ years of production experience in the iGaming/casino industry",
+    "code_style": "Clean, modular, production-grade. No AI-sounding comments, no filler text, no emojis in code. Comment only where a senior dev would. Follow SOLID principles, semantic HTML5, BEM or utility-based CSS, ES6+ JS.",
+    "quality_bar": "Zero bugs, zero console errors, zero layout shifts, fully cross-browser, fully responsive, accessible (a11y), SEO-ready, performance-optimized (Lighthouse 90+)."
+  },
+
+  "project_overview": {
+    "name": "YvnBet",
+    "type": "Casino brand presentation & provider gateway landing page",
+    "description": "A modern, animated, multi-language landing page that represents YvnBet as the casino brand. Users can register via Telegram, log in via iframe to the provider platform. Includes a live jackpot feed, game catalog, hero slider, FAQ/policy pages, admin panel, and age-gate.",
+    "disclaimer_rule": "Never mention that YvnBet works through an external provider. Present YvnBet as the brand itself."
+  },
+
+  "branding": {
+    "name_text": "YvnBet",
+    "logo": {
+      "type": "vector (SVG) wordmark",
+      "style": "custom typographic logo — modern, memorable, gradient or outline treatment matching brand palette",
+      "rule": "Do NOT use any third-party casino logos. Only YvnBet wordmark (SVG, inline or external)."
+    },
+    "color_palette": {
+      "header_bg": "#9A24AD",
+      "body_bg": "#1D052C",
+      "accent_gradient": "linear-gradient(135deg, #9A24AD 0%, #C13FE0 50%, #6A0F9E 100%)",
+      "text_primary": "#FFFFFF",
+      "text_muted": "#B9A5C9",
+      "card_bg": "rgba(154, 36, 173, 0.08)",
+      "border_soft": "rgba(193, 63, 224, 0.25)"
+    },
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։"
+  },
+
+  "tech_stack": {
+    "frontend": ["HTML5", "CSS3 (custom properties, keyframes, grid, flex)", "Vanilla JavaScript (ES6+ modules)"],
+    "structure": {
+      "rule": "All CSS in separate .css files, all JS in separate .js files. NO inline styles. NO inline scripts (except critical pre-hydration bootstrap if strictly needed).",
+      "files": [
+        "index.html",
+        "login.html",
+        "pages/terms.html",
+        "pages/privacy.html",
+        "pages/about.html",
+        "pages/contact.html",
+        "pages/faq.html",
+        "pages/partner.html",
+        "pages/responsible-gaming.html",
+        "assets/css/main.css",
+        "assets/css/components.css",
+        "assets/css/animations.css",
+        "assets/css/responsive.css",
+        "assets/js/app.js",
+        "assets/js/i18n.js",
+        "assets/js/slider.js",
+        "assets/js/jackpot.js",
+        "assets/js/age-gate.js",
+        "assets/js/sound.js",
+        "assets/js/telegram-widget.js",
+        "assets/js/admin-bridge.js",
+        "assets/img/*",
+        "assets/icons/*.svg",
+        "locales/hy.json",
+        "locales/ru.json",
+        "locales/en.json"
+      ]
+    }
+  },
+
+  "layout": {
+    "header": {
+      "background": "#9A24AD",
+      "position": "sticky, top",
+      "left": {
+        "element": "Text-based logo 'YvnBet'",
+        "style": "custom typography, no image logo"
+      },
+      "right": {
+        "buttons": [
+          {
+            "id": "btn-login",
+            "label": "Մուտք",
+            "action": "opens iframe overlay in full viewport size inside /login.html (or modal) loading https://ggplus.pro under YvnBet domain"
+          },
+          {
+            "id": "btn-register",
+            "label": "Գրանցում",
+            "action": "opens https://t.me/yvnbet in new tab"
+          }
+        ]
+      },
+      "extras": {
+        "language_switcher": {
+          "type": "dropdown",
+          "languages": ["hy", "ru", "en"],
+          "auto_detect_by_geo": true,
+          "default": "hy"
+        },
+        "sound_toggle": {
+          "behavior": "Ambient background audio autoplays on first user interaction (browser policy compliant), loops infinitely, no stop. Toggle button mutes/unmutes. Source URL left empty for owner to fill.",
+          "src_placeholder": ""
+        }
+      }
+    },
+
+    "hero_slider": {
+      "position": "center of the landing page",
+      "type": "auto + manual carousel",
+      "autoplay_interval_ms": 5000,
+      "transition": "smooth slide with fade",
+      "navigation": ["dots", "prev/next arrows", "swipe on mobile"],
+      "slides": [
+        {
+          "id": 1,
+          "title": "+10% բոնուս ամեն լիցքավորման համար",
+          "image": "generated — casino chips / bonus glow, brand palette",
+          "icon": "svg-gift"
+        },
+        {
+          "id": 2,
+          "title": "ԴԱՀԿ-ն չի վերահսկում",
+          "image": "generated — shield with abstract lock, brand palette",
+          "icon": "svg-shield"
+        },
+        {
+          "id": 3,
+          "title": "100% գաղտնիություն",
+          "image": "generated — masked user / privacy visual, brand palette",
+          "icon": "svg-lock"
+        },
+        {
+          "id": 4,
+          "title": "Շահելու մեծ հնարավորություն",
+          "image": "generated — glowing jackpot / win visual, brand palette",
+          "icon": "svg-trophy"
+        }
+      ]
+    },
+
+    "payment_methods_strip": {
+      "position": "directly under hero slider",
+      "items": ["LTC", "DASH", "SOL", "USDT"],
+      "style": "icon row with soft hover glow, brand-consistent"
+    },
+
+    "live_jackpot_feed": {
+      "title": "Խառը ջեքփոթներ",
+      "behavior": {
+        "generation": "12 unique masked names per calendar day",
+        "distribution": "spread gradually across 24h (00:00 → 23:59), NOT all at once — one every ~2 hours with slight randomization",
+        "persistence": "Names generated for a given day never repeat within that day",
+        "reset": "At 00:00 (local time) fresh set of 12 names generated",
+        "format": "{masked_name} {amount} AMD",
+        "examples": ["arm** 5000 AMD", "Tik*** 2000 AMD", "Hov*** 67000 AMD"],
+        "masking_rule": "Show first 3 letters, mask rest with *, vary the amount randomly",
+        "seed": "Deterministic by date so refreshing the page doesn't regenerate different names mid-day"
+      },
+      "ui": "scrolling ticker / animated list with subtle slide-in animation for each new entry"
+    },
+
+    "games_section": {
+      "title": "Խաղեր",
+      "layout": "responsive grid of game cards",
+      "card": {
+        "image": "generated thumbnails in brand style",
+        "title": "game name",
+        "on_click": "opens dedicated modal or page for that game (placeholder action, admin-configurable)"
+      }
+    },
+
+    "footer": {
+      "columns": [
+        {
+          "title": "YvnBet",
+          "content": "Text-based brand mark + slogan"
+        },
+        {
+          "title": "Տեղեկություն",
+          "links": [
+            { "label": "Մեր մասին", "href": "pages/about.html" },
+            { "label": "Կայքի պայմանները", "href": "pages/terms.html" },
+            { "label": "Գաղտնիության քաղաքականություն", "href": "pages/privacy.html" },
+            { "label": "Կապ մեզ հետ", "href": "pages/contact.html" },
+            { "label": "Հարցեր (FAQ)", "href": "pages/faq.html" }
+          ]
+        },
+        {
+          "title": "Գործընկերային ծրագիր",
+          "content": "Համագործակցե՛ք YvnBet-ի հետ և վաստակե՛ք ձեր լսարանի հետ։ Ալիքներ, էջեր կամ կայքեր ունե՞ք — մենք պատրաստ ենք առաջարկել շահավետ պայմաններ։",
+          "cta": { "label": "Կապ հաստատել", "href": "pages/partner.html" }
+        },
+        {
+          "title": "Վճարումներ",
+          "items": ["LTC", "DASH", "SOL", "USDT"],
+          "style": "SVG icons only (no emojis)"
+        },
+        {
+          "title": "18+",
+          "content": "18+ պատկերանշան (SVG icon), Responsible Gaming խորհրդանիշ",
+          "note": "Խաղա՛ պատասխանատվությամբ"
+        }
+      ],
+      "bottom_bar": {
+        "copyright": "© <span id='year'></span> YvnBet. Բոլոր իրավունքները պաշտպանված են։",
+        "year_auto_update": true
+      }
+    }
+  },
+
+  "pages": {
+    "index.html": "Home — hero slider, payment strip, games, jackpot feed, footer",
+    "login.html": "Full-screen iframe loader for https://ggplus.pro — no header/footer, clean shell",
+    "pages/terms.html": "Terms & Conditions (admin-editable content)",
+    "pages/privacy.html": "Privacy Policy",
+    "pages/about.html": "About Us",
+    "pages/contact.html": "Contact / Telegram operator",
+    "pages/faq.html": "Frequently Asked Questions",
+    "pages/partner.html": "Partner Program"
+  },
+
+  "key_behaviors": {
+    "age_gate": {
+      "trigger": "on first visit, before content loads",
+      "question": "Դուք 18 տարեկան ե՞ք։",
+      "buttons": {
+        "yes": "store consent in localStorage, proceed",
+        "no": "redirect to https://www.google.com or show block screen"
+      },
+      "style": "modal overlay with blur backdrop, brand colors"
+    },
+    "login_button": {
+      "action": "opens /login.html which loads https://ggplus.pro inside a full-viewport iframe, no borders, no scrollbars visible outside iframe",
+      "fallback": "if iframe blocked by X-Frame-Options, show message: 'Խնդրում ենք կապվել օպերատորի հետ'"
+    },
+    "register_button": {
+      "action": "window.open('https://t.me/yvnbet', '_blank')"
+    },
+    "telegram_floating_widget": {
+      "position": "right side, draggable (left/right/top/bottom snapping)",
+      "on_click": "opens Telegram chat with operator (t.me/yvnbet)",
+      "animation": "pulse + soft floating keyframe",
+      "style": "circular, brand gradient, Telegram SVG icon"
+    },
+    "sound": {
+      "autoplay_on_enter": true,
+      "loop": true,
+      "no_stop": true,
+      "toggle_button": "header, icon-only, mutes/unmutes",
+      "src": ""
+    },
+    "zoom_and_copy_block": {
+      "disable_zoom": true,
+      "disable_copy": true,
+      "disable_right_click": true,
+      "disable_text_select": true,
+      "methods": ["CSS user-select:none", "JS contextmenu prevention", "meta viewport maximum-scale=1, user-scalable=no", "ctrl+wheel prevention"]
+    }
+  },
+
+  "localization": {
+    "languages": ["hy", "ru", "en"],
+    "storage": "locales/hy.json, locales/ru.json, locales/en.json",
+    "switcher_ui": "header dropdown, flag-less, minimal",
+    "auto_detect": "by navigator.language + timezone; default hy if user in Armenia",
+    "rules": [
+      "Do NOT display any text on the site saying 'we support three languages' — the switcher itself is the only indicator.",
+      "All static strings must be translatable via JSON keys."
+    ]
+  },
+
+  "content_rules": {
+    "allowed_on_homepage": ["casino info", "slider", "payment strip", "games", "jackpot feed", "footer links"],
+    "forbidden_on_homepage": [
+      "terms text directly on page",
+      "privacy text directly on page",
+      "partner program text directly on page",
+      "statement 'we support 3 languages'",
+      "statement 'professional casino platform'",
+      "any mention of external provider",
+      "any AI-sounding marketing filler"
+    ],
+    "tone": "Human-written, confident, concise, iGaming-native."
+  },
+
+  "seo": {
+    "meta_keywords": {
+      "hy": ["YvnBet", "կազինո", "օնլայն կազինո Հայաստան", "ջեքփոթ", "խաղեր", "USDT", "LTC", "DASH", "SOL", "բոնուս"],
+      "ru": ["YvnBet", "казино", "онлайн казино", "джекпот", "игры", "USDT", "LTC", "DASH", "SOL", "бонус"],
+      "en": ["YvnBet", "casino", "online casino", "jackpot", "games", "USDT", "LTC", "DASH", "SOL", "bonus"]
+    },
+    "meta_description": "YvnBet — Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "og_tags": true,
+    "twitter_tags": true,
+    "favicon": "SVG favicon derived from YvnBet wordmark",
+    "structured_data": "Organization + WebSite schema"
+  },
+
+  "admin_panel": {
+    "enabled": true,
+    "access_path": "/yvn/admin/login/bet/admin",
+    "credentials": {
+      "username": "admin",
+      "password": "220212"
+    },
+    "security": [
+      "Path obfuscated — not linked anywhere on the site.",
+      "No indexation (noindex, nofollow meta + robots.txt disallow).",
+      "Session-based auth, credentials stored server-side (never in client code).",
+      "Rate-limit login attempts.",
+      "HTTPS only, HttpOnly + Secure cookies."
+    ],
+    "capabilities": [
+      "Edit hero slider slides (title, image, order, enable/disable)",
+      "Edit games (add/remove/reorder, thumbnail, name, link)",
+      "Edit payment methods icons",
+      "Edit footer links and page content (terms, privacy, about, contact, faq, partner, responsible gaming)",
+      "Edit header buttons URLs (login iframe src, register telegram link)",
+      "Edit sound source URL",
+      "Edit jackpot generation rules (amount range, mask pattern, count per day)",
+      "Real-time publish — changes reflect on the live site instantly",
+      "Image upload with validation (type, size)",
+      "Content is stored in a lightweight backend (Node.js/Express + JSON or SQLite) OR Firebase/Supabase if serverless — pick the cleanest production-safe approach."
+    ],
+    "ui": "Clean, minimal, brand-consistent dashboard. React/Vue optional — vanilla is fine if structured well."
+  },
+
+  "animations": {
+    "framework": "Pure CSS keyframes + IntersectionObserver for scroll reveals",
+    "required_effects": [
+      "hero slider slide + fade",
+      "button hover glow pulse",
+      "card lift on hover",
+      "telegram widget floating + pulse",
+      "jackpot entry slide-in",
+      "age-gate fade + scale-in",
+      "background subtle gradient drift on header",
+      "smooth scroll behavior",
+      "language dropdown slide-down"
+    ],
+    "performance": "GPU-accelerated (transform/opacity only), reduced-motion respected via @media (prefers-reduced-motion)"
+  },
+
+  "responsive": {
+    "breakpoints": {
+      "mobile": "≤ 480px",
+      "tablet": "481px – 1024px",
+      "desktop": "≥ 1025px",
+      "wide": "≥ 1440px"
+    },
+    "rules": [
+      "Fluid typography with clamp()",
+      "Grid/flex adaptive layouts",
+      "Touch-friendly tap targets ≥ 44px",
+      "Header collapses to hamburger under 768px",
+      "Iframe login page fills 100dvh correctly on mobile browsers"
+    ]
+  },
+
+  "browser_support": {
+    "targets": [
+      "Chrome 90+",
+      "Firefox 88+",
+      "Safari 14+",
+      "Edge 90+",
+      "Samsung Internet 14+",
+      "iOS Safari 14+",
+      "Android Chrome 90+"
+    ],
+    "polyfills": "only if strictly necessary — prefer native features"
+  },
+
+  "deliverables": {
+    "files": "Full project structure as defined in tech_stack",
+    "backend": "Admin backend + API for content management",
+    "assets": "All generated images (hero slides, game thumbnails), SVG icons (payment methods, 18+, telegram, sound, language, gift, shield, lock, trophy, hamburger, close, arrows)",
+    "docs": "Short README.md explaining deployment, admin path, and content editing",
+    "testing": "Manual QA on all breakpoints + no console errors + Lighthouse audit"
+  },
+
+  "final_notes": [
+    "The output must be a working, deployable project — not a demo skeleton.",
+    "Every text on the site is editable from the admin panel.",
+    "Every image on the site is replaceable from the admin panel.",
+    "Every button URL is configurable from the admin panel.",
+    "The site must feel like a top-tier iGaming brand produced by an experienced design/dev team.",
+    "No AI-sounding language, no filler, no contradictions, no missing pieces.",
+    "The single source of truth for all rules is THIS document — never deviate."
+  ]
+}
