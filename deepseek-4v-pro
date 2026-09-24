@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "project_name": "YvnBet — Casino Provider Landing Platform",
+    "project_type": "Multi-page casino affiliate landing + admin panel",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ",
+    "developer_profile": "Act as a senior full-stack web developer with 12+ years in gambling/igaming platforms. Code must be hand-crafted, modular, production-grade, zero inline CSS/JS in HTML. Every line reads as written by an experienced developer — not AI-generated.",
+    "target_region": "Armenia (primary), CIS (secondary)",
+    "version": "1.0.0"
+  },
+
+"languages": {
+    "supported": ["hy", "ru", "en"],
+    "default": "hy",
+    "implementation_rule": "Full tri-lingual support via i18n.js with JSON locale files. Language switcher in header (small, elegant, icon-based). STRICTLY PROHIBITED: NO text on site advertising multilingual support (e.g., 'Եռալեզու սպասարկում' is BANNED). No promotional fluff like 'պրոֆեսիոնալ խաղային հարթակ' anywhere.",
+    "switcher_position": "Header, near login/register buttons, subtle dropdown or flag icons"
+  },
+
+"tech_stack": {
+    "base": "Vanilla HTML5 + CSS3 + JavaScript (ES6+)",
+    "file_structure": {
+      "root": "index.html",
+      "pages": ["pages/terms.html", "pages/about.html", "pages/contact.html", "pages/privacy.html", "pages/partners.html", "pages/login.html", "pages/game.html"],
+      "css": ["css/main.css", "css/animations.css", "css/responsive.css", "css/components.css", "css/slider.css", "css/ticker.css"],
+      "js": ["js/config.js", "js/i18n.js", "js/main.js", "js/slider.js", "js/ticker.js", "js/audio.js", "js/telegram-widget.js", "js/guard.js", "js/router.js"],
+      "locales": ["locales/hy.json", "locales/ru.json", "locales/en.json"],
+      "assets": ["assets/icons/", "assets/img/", "assets/audio/"],
+      "admin": ["admin/index.html", "admin/admin.css", "admin/admin.js", "admin/auth.js", "admin/api.js"]
+    },
+    "code_quality_rules": [
+      "BEM naming convention for all CSS classes",
+      "Semantic HTML5 tags: header, main, section, article, nav, footer",
+      "All animations via CSS @keyframes — smooth, GPU-accelerated (transform + opacity only)",
+      "JavaScript: vanilla, no jQuery, no heavy frameworks, modular IIFE/ES modules pattern",
+      "Event delegation instead of individual listeners where applicable",
+      "requestAnimationFrame for all continuous animations",
+      "Strict content security: no inline scripts/styles, external resources minimized"
+    ],
+    "browser_support": "Chrome 90+, Firefox 90+, Safari 15+, Edge 90+, Samsung Internet 16+, Opera 80+",
+    "device_support": ["Desktop (1920px, 1440px, 1366px)", "Tablet (768px–1024px)", "Mobile (320px–576px)", "Smart TV browsers"]
+  },
+
+"design_system": {
+    "palette": {
+      "primary_header": "#9A24AD",
+      "body_background": "#1D052C",
+      "secondary_accent": "#C77DFF",
+      "tertiary_accent": "#E0AAFF",
+      "cta_highlight": "#FFD60A",
+      "card_background": "rgba(255,255,255,0.05)",
+      "card_border": "rgba(255,255,255,0.08)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255,255,255,0.7)",
+      "text_muted": "rgba(255,255,255,0.4)",
+      "success": "#00E676",
+      "error": "#FF3D3D"
+    },
+    "typography": {
+      "primary_font": "'Montserrat', sans-serif (Google Fonts — loaded via <link> in <head>)",
+      "logo_font": "Custom wordmark treatment: 'Yvn' in bold white 700 weight + 'Bet' in gradient (#9A24AD → #C77DFF), letter-spacing: 2px, subtle text-shadow glow on hover",
+      "headings": "Bold 700, uppercase for section titles with subtle letter-spacing",
+      "body": "Regular 400, line-height: 1.6"
+    },
+    "style_direction": "Modern dark premium casino aesthetic — glassmorphism cards, soft glow effects, gradient CTA buttons, smooth micro-interactions, card tilt-on-hover, scroll-triggered fade-in-up reveals, subtle parallax depth",
+    "icons_rule": "ALL visual indicators must use SVG icons (inline <svg> or external sprite). ZERO emojis, ZERO unicode symbols as icons anywhere on site.",
+    "logo_rule": "NO IMAGE LOGO. Only a styled text wordmark 'YvnBet' in the header. Hover triggers a subtle shimmer/glow animation via CSS keyframes."
+  },
+
+"ux_guards": {
+    "zoom_disabled": "meta viewport with user-scalable=no, maximum-scale=1.0 + JS preventDefault on gesturestart/gesturechange",
+    "copy_protection": "user-select: none; -webkit-user-select: none; on all interactive sections. JS preventDefault on copy/cut/contextmenu events. EXCEPTION: legal pages (Terms, Privacy, Contact, About) where users may need to copy text.",
+    "image_protection": "pointer-events: none on slider images, draggable='false' attribute, preventDefault on dragstart"
+  },
+
+"seo": {
+    "meta_title": { "hy": "YvnBet — Խաղա վստահ, հաղթիր YVNBET-ի հետ", "ru": "YvnBet — Играй уверенно, выигрывай с YVNBET", "en": "YvnBet — Play Confidently, Win with YVNBET" },
+    "meta_description": { "hy": "YvnBet առցանց կազինո հարթակ: Արագ գրանցում, ակնթարթային լիցքավորում կրիպտոարժույթով, +10% բոնուս ամեն դեպոզիտի վրա:", "ru": "YvnBet онлайн казино платформа. Быстрая регистрация, мгновенное пополнение криптовалютой, +10% бонус на каждый депозит.", "en": "YvnBet online casino platform. Fast registration, instant crypto deposits, +10% bonus on every deposit." },
+    "meta_keywords_hy": "YvnBet, yvnbet կազինո, առցանց կազինո, կրիպտո կազինո, USDT կազինո, LTC կազինո, DASH կազինո, SOL կազինո, Telegram կազինո, առցանց խաղեր, ջեքփոթ, սլոթեր, live կազինո",
+    "meta_keywords_ru": "YvnBet, yvnbet казино, онлайн казино, крипто казино, USDT казино, LTC казино, DASH казино, SOL казино, Telegram казино, онлайн игры, джекпот, слоты, live казино",
+    "meta_keywords_en": "YvnBet, yvnbet casino, online casino, crypto casino, USDT casino, LTC casino, DASH casino, SOL casino, Telegram casino, online games, jackpot, slots, live casino",
+    "og_tags": true,
+    "canonical": true,
+    "structured_data": "Organization schema JSON-LD"
+  },
+
+"header": {
+    "layout": "Fixed/Sticky top bar, z-index: 1000, background: #9A24AD, backdrop-filter: blur(10px), subtle bottom glow border",
+    "left_section": {
+      "logo": {
+        "type": "TEXT_WORDMARK",
+        "html_structure": "<a href='/' class='header__logo'><span class='header__logo-yvn'>Yvn</span><span class='header__logo-bet'>Bet</span></a>",
+        "animation": "On hover: subtle text-shadow glow pulse, 0.3s ease transition"
+      }
+    },
+    "right_section": {
+      "items": [
+        {
+          "type": "language_switcher",
+          "implementation": "Compact dropdown/flag buttons (🇦🇲/🇷🇺/🇬🇧 or HY/RU/EN text), no label, no promotional copy. Stores selection in localStorage. Triggers i18n.js rerender."
+        },
+        {
+          "type": "button",
+          "label_hy": "Մուտք",
+          "label_ru": "Вход",
+          "label_en": "Login",
+          "classes": "btn btn--outline",
+          "behavior": "Navigate to /pages/login.html — opens https://ggplus.pro in full-viewport iframe under our domain. Includes loading spinner overlay during iframe load, graceful fallback link 'Open in new tab' if provider blocks framing. URL hash managed for proper back-button behavior."
+        },
+        {
+          "type": "button",
+          "label_hy": "Գրանցում",
+          "label_ru": "Регистрация",
+          "label_en": "Register",
+          "classes": "btn btn--primary btn--pulse",
+          "behavior": "Redirect to https://t.me/yvnbet (Telegram operator chat)",
+          "animation": "Subtle pulse glow animation via @keyframes pulse-glow, 2s infinite"
+        }
+      ]
+    },
+    "mobile_behavior": "On mobile, buttons stack nicely or collapse into hamburger menu (no hamburger if only 2 buttons + language). Language switcher remains visible."
+  },
+
+"hero_slider": {
+    "type": "Full-width carousel with auto-rotation + manual touch/swipe + arrow navigation + dot indicators",
+    "autoplay_interval_ms": 6000,
+    "pause_on_hover": true,
+    "pause_on_interaction": true,
+    "touch_support": "Swipe left/right via touch events with momentum deceleration",
+    "keyboard_support": "ArrowLeft/ArrowRight keys",
+    "slides": [
+      {
+        "id": "slide_bonus",
+        "title_hy": "+10% բոնուս ամեն լիցքավորման համար",
+        "title_ru": "+10% бонус на каждое пополнение",
+        "title_en": "+10% Bonus on Every Deposit",
+        "visual_theme": "Dark purple gradient background with floating golden coins/chips, glow particles, a prominent '+10%' badge with shine animation",
+        "generated_image_style": "Generative: dark #1D052C base, radial purple glow at center, scattered golden coin SVGs with CSS float animation, '+10%' in bold gold gradient text with text-shadow glow"
+      },
+      {
+        "id": "slide_privacy_gov",
+        "title_hy": "ԴԱՀԿ-ն չի վերահսկում ձեզ",
+        "title_ru": "ДАХК не контролирует вас",
+        "title_en": "No Government Oversight",
+        "visual_theme": "Shield icon with cracked surveillance camera metaphor, freedom/liberty visual, deep purple with golden shield outline",
+        "generated_image_style": "Large SVG shield icon center, crossed-out surveillance camera, '100% ԱՆՎԵՐԱՀՍԿԵԼԻ' watermark, glowing edges"
+      },
+      {
+        "id": "slide_privacy",
+        "title_hy": "100% գաղտնիություն",
+        "title_ru": "100% конфиденциальность",
+        "title_en": "100% Confidentiality",
+        "visual_theme": "Lock/padlock icon with anonymous mask silhouette, encrypted data streams visual",
+        "generated_image_style": "Large padlock SVG, binary/encrypted data streams fading into background, 'ԳԱՂՏՆԻ' in bold with neon glow"
+      },
+      {
+        "id": "slide_jackpot",
+        "title_hy": "Շահելու մեծ հնարավորություն",
+        "title_ru": "Большие шансы на выигрыш",
+        "title_en": "Huge Winning Opportunities",
+        "visual_theme": "Jackpot machine with coins bursting, lucky 7s, sparkling diamonds",
+        "generated_image_style": "Golden jackpot wheel, coins mid-explosion, sparkle particles via CSS animation, 'ՀԱՂԹԻՐ' in bold gold"
+      }
+    ],
+    "transition_animation": "CSS @keyframes slide-fade: opacity 0→1 + translateX transition, 800ms ease-in-out",
+    "below_slider": {
+      "payment_methods_section": {
+        "title_hy": "Լիցքավորման միջոցներ",
+        "title_ru": "Способы пополнения",
+        "title_en": "Deposit Methods",
+        "icons": [
+          { "currency": "USDT", "icon": "assets/icons/usdt.svg", "tooltip_hy": "Ընդունում ենք USDT", "animation": "subtle float-up-down, 3s infinite, staggered delay per icon" },
+          { "currency": "LTC", "icon": "assets/icons/ltc.svg", "tooltip_hy": "Ընդունում ենք LTC", "animation": "same float, 0.3s delay" },
+          { "currency": "DASH", "icon": "assets/icons/dash.svg", "tooltip_hy": "Ընդունում ենք DASH", "animation": "same float, 0.6s delay" },
+          { "currency": "SOL", "icon": "assets/icons/sol.svg", "tooltip_hy": "Ընդունում ենք SOL", "animation": "same float, 0.9s delay" }
+        ],
+        "layout": "Centered row of 4 circular icon cards, glassmorphism background, each icon 64px with labeled name below"
+      }
+    }
+  },
+
+"advantages_section": {
+    "title_hy": "YvnBet-ի առավելությունները",
+    "title_ru": "Преимущества YvnBet",
+    "title_en": "YvnBet Advantages",
+    "layout": "Responsive grid: 5 cards, 3 columns desktop, 2 tablet, 1 mobile",
+    "cards": [
+      { "icon": "assets/icons/shield-check.svg", "title_hy": "ԴԱՀԿ-ն չի վերահսկում ձեզ", "desc_hy": "Ձեր գործունեությունը մնում է լիովին անվերահսկելի որևէ պետական մարմնի կողմից:" },
+      { "icon": "assets/icons/lock-key.svg", "title_hy": "Անձնական տվյալները պաշտպանված են", "desc_hy": "Օգտատիրոջ անձնական տվյալները և ինֆորմացիան ոչ մի պետական մարմնի չի տրամադրվում:" },
+      { "icon": "assets/icons/headset.svg", "title_hy": "Միշտ պատրաստ օգնելու", "desc_hy": "Օպերատորը միշտ պատրաստ է օգնել ձեզ կայքի հետ կապված ցանկացած հարցում:" },
+      { "
