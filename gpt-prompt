@@ -1,0 +1,988 @@
+{
+  "project": {
+    "name": "YvnBet",
+    "type": "production_ready_casino_landing_platform",
+    "brand_name": "YvnBet",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "goal": "Build a premium, production-ready YvnBet casino website with a modern high-end UI/UX, multilingual support, animated visual elements, casino game presentation, jackpot ticker, payment-method presentation, age verification, separate informational pages, and a secure administration panel for managing all editable website content.",
+    "quality_standard": "The final result must look and behave like a website created by an experienced senior product designer and senior full-stack developer, not like AI-generated template code."
+  },
+
+  "critical_rules": {
+    "preserve_professional_quality": true,
+    "no_placeholder_sections": true,
+    "no_fake_buttons": true,
+    "no_broken_links": true,
+    "no_dead_interactions": true,
+    "no_console_errors": true,
+    "no_unnecessary_text": true,
+    "no_unrelated_features": true,
+    "production_ready": true,
+    "fully_responsive": true,
+    "clean_architecture": true,
+    "secure_backend": true,
+    "validate_all_inputs": true,
+    "handle_edge_cases": true,
+    "test_all_interactions": true,
+    "test_mobile": true,
+    "test_tablet": true,
+    "test_desktop": true,
+    "test_major_browsers": true
+  },
+
+  "brand_and_visual_identity": {
+    "brand": "YvnBet",
+    "logo_style": "Use a premium vector/text-based YvnBet brand mark. The main website header must display YvnBet as a refined custom typographic logo/wordmark. Do not use a generic text heading.",
+    "do_not_use_third_party_branding": true,
+    "do_not_display_provider_brand": true,
+    "do_not_display_external_provider_name_on_public_pages": true,
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "design_direction": "Premium modern casino aesthetic, elegant, dark, visually rich but clean, spacious, memorable, sophisticated, fast, and easy to navigate.",
+    "avoid": [
+      "cheap casino template appearance",
+      "overloaded layouts",
+      "excessive gradients",
+      "random decorative elements",
+      "emoji-based interface",
+      "generic stock-template appearance",
+      "AI-looking copy",
+      "unnecessary sections"
+    ]
+  },
+
+  "color_system": {
+    "header": "#9A24AD",
+    "body_background": "#1D052C",
+    "primary_accent": "#9A24AD",
+    "secondary_accent": "#C84DDE",
+    "dark_surface": "#270A3B",
+    "card_surface": "#321047",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#CFC2D8",
+    "border": "rgba(255,255,255,0.10)",
+    "design_note": "Use the provided colors as the core palette but intelligently derive supporting shades for readability, hierarchy, hover states, active states and animations."
+  },
+
+  "technology_requirements": {
+    "architecture": "Full-stack production architecture.",
+    "frontend": [
+      "HTML5",
+      "semantic markup",
+      "modern CSS",
+      "JavaScript",
+      "responsive layout",
+      "CSS keyframes",
+      "accessible interaction states"
+    ],
+    "backend": {
+      "required": true,
+      "responsibility": [
+        "authentication",
+        "admin authentication",
+        "content management",
+        "language management",
+        "dynamic jackpot generation",
+        "site settings",
+        "media management",
+        "page management",
+        "button/link management",
+        "real-time content refresh"
+      ]
+    },
+    "database": {
+      "required": true,
+      "purpose": [
+        "website content",
+        "translations",
+        "settings",
+        "jackpot data",
+        "payment methods",
+        "slider items",
+        "games",
+        "footer pages",
+        "admin-managed content"
+      ]
+    },
+    "configuration": {
+      "secrets_must_not_be_hardcoded_in_public_frontend": true,
+      "use_environment_variables_for_sensitive_values": true
+    },
+    "project_structure": {
+      "organized": true,
+      "separate_frontend_backend_logic": true,
+      "css_in_dedicated_files": true,
+      "javascript_in_dedicated_files": true,
+      "assets_in_dedicated_directories": true,
+      "server_logic_not_exposed_to_client": true
+    }
+  },
+
+  "homepage": {
+    "layout": {
+      "style": "clean premium visual hierarchy",
+      "sections_should_be_balanced": true,
+      "avoid_overcrowding": true
+    },
+
+    "header": {
+      "position": "top",
+      "logo": {
+        "text": "YvnBet",
+        "style": "premium vector-like typographic wordmark",
+        "position": "left"
+      },
+      "navigation": {
+        "position": "right",
+        "buttons": [
+          {
+            "label": "Մուտք",
+            "action": "open_login_page"
+          },
+          {
+            "label": "Գրանցում",
+            "action": "open_telegram_registration"
+          }
+        ]
+      },
+      "telegram_action": {
+        "url": "https://t.me/yvnbet",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "login_action": {
+        "url": "https://ggplus.pro",
+        "preferred_behavior": "open internal login page which presents the provider login experience in a full-size iframe when technically allowed"
+      }
+    },
+
+    "hero": {
+      "brand": "YvnBet",
+      "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+      "style": "minimal premium hero with subtle animation",
+      "avoid_large_text_wall": true
+    },
+
+    "slider": {
+      "enabled": true,
+      "autoplay": true,
+      "manual_navigation": true,
+      "loop": true,
+      "smooth_transition": true,
+      "touch_swipe": true,
+      "items": [
+        {
+          "title": "+10% բոնուս",
+          "text": "Ստացեք +10% բոնուս յուրաքանչյուր լիցքավորման դեպքում։",
+          "theme": "premium casino promotional visual"
+        },
+        {
+          "title": "ԴԱՀԿ-ն չի վերահսկում ձեզ",
+          "text": "YvnBet-ում ձեր տվյալների գաղտնիությունը առաջնահերթություն է։"
+        },
+        {
+          "title": "100% գաղտնիություն",
+          "text": "Ձեր անձնական տվյալներն ու հաշվի տեղեկատվությունը պահվում են գաղտնի։"
+        },
+        {
+          "title": "Շահելու մեծ հնարավորություն",
+          "text": "Բացահայտեք հասանելի խաղերը և ընտրեք ձեզ հետաքրքրող տարբերակը։"
+        }
+      ],
+      "image_generation": {
+        "required": true,
+        "generate_custom_visuals": true,
+        "style": "premium casino visuals, dark purple environment, elegant lighting, modern gaming atmosphere, professional commercial quality",
+        "do_not_use_watermarked_assets": true,
+        "do_not_use_random_stock_images": true
+      }
+    }
+  },
+
+  "payment_methods": {
+    "section_title": "Լիցքավորման միջոցները",
+    "methods": [
+      {
+        "name": "USDT",
+        "icon": "use_real_or_custom_vector_icon"
+      },
+      {
+        "name": "DASH",
+        "icon": "use_real_or_custom_vector_icon"
+      },
+      {
+        "name": "LTC",
+        "icon": "use_real_or_custom_vector_icon"
+      },
+      {
+        "name": "SOL",
+        "icon": "use_real_or_custom_vector_icon"
+      }
+    ],
+    "design": "premium icon cards, subtle hover animation, no emoji icons"
+  },
+
+  "games": {
+    "enabled": true,
+    "title": "Խաղեր",
+    "display": "modern responsive grid",
+    "game_cards": {
+      "image": true,
+      "title": true,
+      "hover_animation": true,
+      "clickable": true,
+      "action": "open_game_details_or_game_page",
+      "admin_managed": true
+    },
+    "requirements": [
+      "Each game must have its own image.",
+      "Each game must have editable title.",
+      "Each game may contain description.",
+      "Each game may contain external game URL.",
+      "Every game can be added, edited, reordered or removed from admin panel."
+    ]
+  },
+
+  "jackpot_system": {
+    "enabled": true,
+    "title": "Վերջին շահումներ",
+    "purpose": "Display a continuously updating rolling list of randomized winner names and amounts while maintaining daily consistency.",
+    "daily_generation": {
+      "timezone": "Asia/Yerevan",
+      "generation_boundary": "00:00",
+      "names_per_day": 12,
+      "generate_new_set_every_day": true,
+      "do_not_generate_all_visibly_at_once": true,
+      "reveal_gradually": true,
+      "randomized_order": true
+    },
+    "name_format": {
+      "mask_names": true,
+      "examples": [
+        "arm**",
+        "Tik***",
+        "Hov***"
+      ],
+      "important_rule": "Once a generated name is assigned for the current daily dataset, do not duplicate that same generated name within the same day."
+    },
+    "amounts": {
+      "currency": "AMD",
+      "randomized": true,
+      "examples": [
+        "5000 AMD",
+        "2000 AMD",
+        "67000 AMD"
+      ]
+    },
+    "consistency": {
+      "same_daily_dataset_for_all_visitors": true,
+      "persist_daily_dataset_in_database": true,
+      "do_not_regenerate_on_each_page_refresh": true,
+      "new_dataset_after_next_00_00": true
+    },
+    "animation": {
+      "smooth_vertical_or_horizontal_ticker": true,
+      "human_like_timing": true,
+      "avoid_rapid_changes": true
+    }
+  },
+
+  "age_verification": {
+    "enabled": true,
+    "show_on_first_visit": true,
+    "question": "Դուք 18 տարեկան կամ ավելի մեծ ե՞ք։",
+    "buttons": {
+      "yes": "Այո",
+      "no": "Ոչ"
+    },
+    "yes_action": "allow_access_and_store_session_or_cookie_consent",
+    "no_action": "deny_access_and_redirect_or_display_access_denied_screen",
+    "repeat_behavior": "Do not display repeatedly on every page load after valid consent unless consent expires."
+  },
+
+  "language_system": {
+    "enabled": true,
+    "languages": [
+      "hy",
+      "ru",
+      "en"
+    ],
+    "default_language": "hy",
+    "selector": {
+      "style": "compact modern dropdown",
+      "open_on_click": true,
+      "show_language_names": true,
+      "avoid_large_language_panels": true
+    },
+    "auto_detection": {
+      "enabled": true,
+      "priority": [
+        "stored_user_preference",
+        "browser_language",
+        "regional_locale",
+        "default_hy"
+      ],
+      "examples": {
+        "Armenia": "hy",
+        "Russia": "ru",
+        "Other_supported_English_locales": "en"
+      }
+    },
+    "important_rule": "Do not place text on the homepage saying that multilingual support is available. The language functionality must be self-explanatory through the language selector only.",
+    "all_content_must_be_translatable": true,
+    "admin_editable_translations": true
+  },
+
+  "registration_and_login": {
+    "registration": {
+      "button": "Գրանցում",
+      "destination": "https://t.me/yvnbet",
+      "behavior": "open Telegram operator/chat"
+    },
+    "login": {
+      "button": "Մուտք",
+      "login_page_route": "/login",
+      "provider_url": "https://ggplus.pro",
+      "preferred_method": "full-viewport iframe",
+      "requirements": [
+        "iframe must visually occupy the login content area like a normal website",
+        "preserve responsive behavior",
+        "hide unnecessary borders",
+        "use loading state",
+        "handle iframe loading errors gracefully",
+        "provide fallback action to open provider directly if iframe embedding is blocked"
+      ],
+      "security_note": "Do not bypass browser security policies. If the provider blocks iframe embedding through CSP or X-Frame-Options, show a professional fallback button that opens the provider in a new tab."
+    }
+  },
+
+  "floating_telegram_button": {
+    "enabled": true,
+    "position": "right_center",
+    "draggable": true,
+    "default_position": "right",
+    "animation": {
+      "enabled": true,
+      "style": "smooth subtle pulse and floating animation",
+      "css_keyframes": true
+    },
+    "icon": "Telegram vector icon",
+    "click_action": "open https://t.me/yvnbet",
+    "remember_custom_position": true,
+    "mobile_safe_area": true,
+    "do_not_block_buttons": true
+  },
+
+  "audio": {
+    "enabled": true,
+    "auto_play_requested": true,
+    "source": "",
+    "admin_editable": true,
+    "repeat": true,
+    "loop": true,
+    "controls": {
+      "visible_mute_toggle": true,
+      "toggle_action": "enable_disable_audio"
+    },
+    "important_browser_rule": "Because modern browsers commonly block autoplay with sound until user interaction, implement autoplay gracefully and use a user-interaction fallback without causing errors."
+  },
+
+  "footer": {
+    "style": "premium compact multi-column footer",
+    "auto_year": true,
+    "copyright": "YvnBet",
+    "responsible_gambling": "Խաղացեք պատասխանատվությամբ։",
+    "payment_icons": [
+      "USDT",
+      "DASH",
+      "LTC",
+      "SOL"
+    ],
+    "links": [
+      {
+        "label": "Պայմաններ և դրույթներ",
+        "route": "/terms"
+      },
+      {
+        "label": "Մեր մասին",
+        "route": "/about"
+      },
+      {
+        "label": "Կապ մեզ հետ",
+        "route": "/contact"
+      },
+      {
+        "label": "Գաղտնիության քաղաքականություն",
+        "route": "/privacy"
+      },
+      {
+        "label": "Գործընկերային ծրագիր",
+        "route": "/partners"
+      }
+    ],
+    "important_rule": "Do not display the full text of these policies or partner information directly on the homepage. Only show the footer links. Clicking each link must open its dedicated page."
+  },
+
+  "pages": {
+    "required": [
+      "/",
+      "/login",
+      "/about",
+      "/contact",
+      "/privacy",
+      "/terms",
+      "/partners"
+    ],
+    "page_behavior": {
+      "independent_layout": true,
+      "shared_header": true,
+      "shared_footer": true,
+      "responsive": true,
+      "translated": true
+    },
+
+    "about": {
+      "purpose": "Present YvnBet identity, philosophy, privacy focus, operational approach and customer support information.",
+      "editable_from_admin": true
+    },
+
+    "contact": {
+      "purpose": "Provide official contact and Telegram operator communication.",
+      "telegram": "https://t.me/yvnbet",
+      "editable_from_admin": true
+    },
+
+    "privacy": {
+      "purpose": "Dedicated privacy policy page.",
+      "editable_from_admin": true
+    },
+
+    "terms": {
+      "title": "Պայմաններ և դրույթներ",
+      "content_requirements": [
+        "Before registration, users should read the YvnBet terms.",
+        "Only persons aged 18 or older may register.",
+        "One user may maintain only one account.",
+        "Multiple accounts may result in account blocking according to the published rules.",
+        "YvnBet is not responsible for technical issues caused by third-party services or circumstances outside its direct control.",
+        "Abusive or disrespectful behavior toward the operator may result in blocking according to the published rules.",
+        "Minimum deposit: 1500 AMD.",
+        "Minimum withdrawal: 2000 AMD.",
+        "Maximum daily withdrawal: 200000 AMD.",
+        "Withdrawal options may include supported cryptocurrency addresses and VISA, Mastercard and ArCa payment methods, subject to operational availability.",
+        "Each eligible deposit receives a +10% bonus under the applicable promotional conditions."
+      ],
+      "editable_from_admin": true
+    },
+
+    "partners": {
+      "title": "Գործընկերային ծրագիր",
+      "copy": "Ունե՞ք Telegram ալիք, կայք կամ այլ հարթակ և ցանկանում եք համագործակցել YvnBet-ի հետ։ Կապ հաստատեք մեզ հետ և տեղեկացեք համագործակցության հնարավորությունների մասին։",
+      "editable_from_admin": true
+    }
+  },
+
+  "site_rules": {
+    "minimum_deposit": "1500 AMD",
+    "minimum_withdrawal": "2000 AMD",
+    "maximum_daily_withdrawal": "200000 AMD",
+    "deposit_bonus": "+10%",
+    "withdrawal_methods": [
+      "Cryptocurrency address",
+      "VISA",
+      "Mastercard",
+      "ArCa"
+    ],
+    "crypto_methods": [
+      "USDT",
+      "LTC",
+      "DASH",
+      "SOL"
+    ],
+    "registration_method": "Telegram",
+    "user_operations": [
+      "registration",
+      "login",
+      "withdrawal",
+      "deposit",
+      "support"
+    ],
+    "presentation_rule": "Do not expose a large rules block directly on the homepage. Only summarize key commercial information in elegant UI cards where appropriate and keep the complete legal rules in the dedicated Terms page."
+  },
+
+  "advantages": {
+    "section_title": "YvnBet-ի առավելությունները",
+    "items": [
+      {
+        "title": "Գաղտնիություն",
+        "description": "Օգտատիրոջ անձնական տվյալները պետք է մշակվեն գաղտնիության սկզբունքներին համապատասխան։",
+        "icon": "privacy_vector_icon"
+      },
+      {
+        "title": "Telegram միջոցով սպասարկում",
+        "description": "Գրանցման և հիմնական հաղորդակցության գործողությունները կատարվում են Telegram-ի միջոցով։",
+        "icon": "telegram_vector_icon"
+      },
+      {
+        "title": "Արագ աջակցություն",
+        "description": "Օպերատորը հասանելի է կայքի և հաշվի հետ կապված հարցերի համար։",
+        "icon": "support_vector_icon"
+      },
+      {
+        "title": "+10% բոնուս",
+        "description": "Յուրաքանչյուր համապատասխանող լիցքավորման դեպքում նախատեսված է +10% բոնուս։",
+        "icon": "bonus_vector_icon"
+      }
+    ]
+  },
+
+  "seo": {
+    "enabled": true,
+    "title_templates": {
+      "hy": "YvnBet — Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+      "ru": "YvnBet — Играй уверенно вместе с YVNBET",
+      "en": "YvnBet — Play with confidence"
+    },
+    "meta_keywords": {
+      "hy": [
+        "YvnBet",
+        "օնլայն կազինո",
+        "կազինո խաղեր",
+        "կազինո Հայաստան",
+        "քազինո",
+        "օնլայն խաղեր",
+        "սլոթեր",
+        "ջեքփոթ",
+        "USDT կազինո",
+        "LTC կազինո",
+        "SOL կազինո",
+        "DASH կազինո",
+        "YvnBet կազինո"
+      ],
+      "ru": [
+        "YvnBet",
+        "онлайн казино",
+        "казино",
+        "казино игры",
+        "слоты",
+        "джекпот",
+        "USDT казино",
+        "LTC казино",
+        "SOL казино",
+        "DASH казино",
+        "казино онлайн",
+        "игровая платформа YvnBet"
+      ],
+      "en": [
+        "YvnBet",
+        "online casino",
+        "casino games",
+        "casino slots",
+        "jackpot",
+        "crypto casino",
+        "USDT casino",
+        "LTC casino",
+        "SOL casino",
+        "DASH casino",
+        "online slots",
+        "YvnBet casino"
+      ]
+    },
+    "technical_seo": [
+      "canonical URLs",
+      "hreflang for hy/ru/en",
+      "Open Graph metadata",
+      "Twitter Card metadata",
+      "structured data where appropriate",
+      "sitemap.xml",
+      "robots.txt",
+      "clean URLs",
+      "semantic headings",
+      "optimized image metadata",
+      "fast loading"
+    ]
+  },
+
+  "responsive_design": {
+    "required": true,
+    "devices": [
+      "desktop",
+      "laptop",
+      "tablet",
+      "mobile"
+    ],
+    "requirements": [
+      "mobile-first behavior where appropriate",
+      "no horizontal overflow",
+      "responsive typography",
+      "responsive slider",
+      "touch-friendly controls",
+      "floating Telegram button must adapt to small screens",
+      "footer must remain usable on mobile",
+      "game cards must reflow correctly",
+      "no broken iframe layout",
+      "no clipped content"
+    ]
+  },
+
+  "animations": {
+    "technology": "CSS keyframes + performant JavaScript where needed",
+    "requirements": [
+      "premium page entrance",
+      "smooth hover states",
+      "slider transitions",
+      "floating Telegram animation",
+      "jackpot ticker animation",
+      "button interaction animation",
+      "card reveal animation",
+      "micro-interactions"
+    ],
+    "performance": {
+      "gpu_friendly": true,
+      "avoid_heavy_continuous_js": true,
+      "respect_prefers_reduced_motion": true
+    }
+  },
+
+  "icons_and_images": {
+    "rule": "Use vector icons or SVG icons instead of emoji.",
+    "required_icons": [
+      "Telegram",
+      "USDT",
+      "LTC",
+      "DASH",
+      "SOL",
+      "privacy",
+      "support",
+      "bonus",
+      "navigation",
+      "language",
+      "sound"
+    ],
+    "images": {
+      "casino_game_images": true,
+      "slider_images": true,
+      "optimized_formats": [
+        "WebP",
+        "AVIF where supported"
+      ],
+      "lazy_loading": true,
+      "responsive_images": true
+    }
+  },
+
+  "copy_protection_and_zoom": {
+    "requested": true,
+    "disable_context_menu": true,
+    "disable_copy_shortcuts": true,
+    "disable_dragging_images": true,
+    "disable_zoom_requested": true,
+    "implementation_note": "Apply practical client-side restrictions where technically possible, but do not break accessibility or rely on them as a security mechanism. Browser-level controls cannot be absolutely overridden."
+  },
+
+  "admin_panel": {
+    "required": true,
+    "purpose": "Provide a secure CMS-like administration system allowing the site owner to change website content without editing source code.",
+    "admin_features": {
+      "dashboard": true,
+      "site_settings": true,
+      "homepage_content": true,
+      "slider_management": true,
+      "game_management": true,
+      "image_management": true,
+      "text_management": true,
+      "button_management": true,
+      "link_management": true,
+      "footer_management": true,
+      "payment_methods_management": true,
+      "jackpot_settings": true,
+      "audio_management": true,
+      "seo_management": true,
+      "translation_management": true,
+      "page_management": true,
+      "responsible_gambling_text": true
+    },
+
+    "real_time_update": {
+      "required": true,
+      "behavior": "After an admin saves and publishes a change, the public website must reflect the new data immediately or after a very short controlled cache invalidation interval.",
+      "avoid_manual_code_edits": true
+    },
+
+    "content_editability": {
+      "everything_important_must_be_editable": true,
+      "editable_items": [
+        "homepage text",
+        "slogan",
+        "slider titles",
+        "slider descriptions",
+        "slider images",
+        "game titles",
+        "game descriptions",
+        "game images",
+        "game URLs",
+        "button labels",
+        "button URLs",
+        "footer links",
+        "footer text",
+        "payment methods",
+        "payment icons",
+        "jackpot parameters",
+        "audio source",
+        "SEO title",
+        "SEO description",
+        "SEO keywords",
+        "translations",
+        "page content"
+      ]
+    },
+
+    "security": {
+      "authentication": true,
+      "password_hashing": true,
+      "session_security": true,
+      "csrf_protection": true,
+      "rate_limiting": true,
+      "login_attempt_protection": true,
+      "server_side_authorization": true,
+      "secure_headers": true,
+      "audit_logs": true,
+      "never_store_plaintext_passwords": true
+    },
+
+    "admin_url": {
+      "requested_structure": "/yvn/admin/login/bet/admin",
+      "note": "Use this as a non-obvious admin route, but do not rely on route secrecy for security. Protect the panel with proper authentication, authorization, rate limiting and server-side controls."
+    },
+
+    "credentials": {
+      "initial_username": "login",
+      "initial_password": "220212",
+      "critical_security_requirement": "Do not hard-code or expose these credentials in public frontend files. Store the initial credentials securely on the server or in environment configuration and require password hashing."
+    }
+  },
+
+  "navigation_rules": {
+    "header_buttons_must_work": true,
+    "footer_links_must_work": true,
+    "game_cards_must_work": true,
+    "language_selector_must_work": true,
+    "telegram_button_must_work": true,
+    "sound_control_must_work": true,
+    "slider_controls_must_work": true,
+    "age_modal_must_work": true,
+    "no_dead_links": true,
+    "no_placeholder_href": true
+  },
+
+  "content_rules": {
+    "do_not_say": [
+      "multilingual support",
+      "we support three languages",
+      "professional gaming platform",
+      "casino provider",
+      "we are a provider",
+      "AI-generated wording",
+      "template wording"
+    ],
+    "homepage_should_focus_on": [
+      "YvnBet",
+      "casino games",
+      "bonuses",
+      "privacy",
+      "payment methods",
+      "jackpots",
+      "registration",
+      "login",
+      "support"
+    ],
+    "do_not_show_directly_on_homepage": [
+      "full terms and conditions",
+      "full privacy policy",
+      "full partner program information"
+    ],
+    "those_items_are_footer_pages_only": true
+  },
+
+  "ux_ui": {
+    "design_principles": [
+      "clear visual hierarchy",
+      "strong typography",
+      "balanced whitespace",
+      "consistent component system",
+      "clear call-to-action hierarchy",
+      "excellent mobile usability",
+      "premium micro-interactions",
+      "fast perceived performance",
+      "minimal cognitive load"
+    ],
+    "accessibility": {
+      "semantic_html": true,
+      "keyboard_navigation": true,
+      "visible_focus_states": true,
+      "contrast_checks": true,
+      "reduced_motion_support": true
+    }
+  },
+
+  "performance": {
+    "requirements": [
+      "lazy-load non-critical images",
+      "compress assets",
+      "minimize blocking scripts",
+      "use efficient CSS",
+      "avoid unnecessary dependencies",
+      "cache static assets",
+      "optimize fonts",
+      "avoid layout shifts",
+      "optimize iframe loading",
+      "use efficient animations"
+    ],
+    "target": "Fast loading and smooth interaction on mid-range mobile devices as well as desktop systems."
+  },
+
+  "security": {
+    "requirements": [
+      "HTTPS-ready",
+      "secure cookies",
+      "CSRF protection",
+      "XSS protection",
+      "SQL injection protection",
+      "rate limiting",
+      "secure admin authentication",
+      "server-side authorization",
+      "input sanitization",
+      "validation on client and server",
+      "security headers",
+      "do not expose secrets",
+      "do not expose database credentials",
+      "do not expose admin authentication details in frontend source"
+    ]
+  },
+
+  "browser_compatibility": {
+    "required": true,
+    "support": [
+      "Chrome",
+      "Edge",
+      "Firefox",
+      "Safari",
+      "mobile Safari",
+      "Android Chrome"
+    ],
+    "graceful_degradation": true
+  },
+
+  "legal_and_compliance_note": {
+    "implementation_rule": "Do not make unsupported legal guarantees in website copy. Any statements about privacy, government access, licensing, regulation, taxes or legal status must be verified and phrased according to the actual legal and operational situation before publication.",
+    "age_requirement": "18+ access gate must be implemented.",
+    "responsible_gambling": "Include responsible-gambling messaging in the footer and/or appropriate legal information page."
+  },
+
+  "deliverables": {
+    "required": [
+      "complete working website",
+      "complete backend",
+      "database schema",
+      "admin panel",
+      "responsive UI",
+      "all pages",
+      "all translations",
+      "all required assets",
+      "generated slider visuals",
+      "game image placeholders or actual properly licensed assets",
+      "SEO setup",
+      "sitemap",
+      "robots",
+      "secure authentication",
+      "configuration example",
+      "installation documentation",
+      "deployment documentation"
+    ],
+    "code_quality": {
+      "clean": true,
+      "maintainable": true,
+      "modular": true,
+      "well_named": true,
+      "comment_only_where_useful": true,
+      "no_dead_code": true,
+      "no_duplicate_logic": true,
+      "no_debug_output": true,
+      "no_console_logs_in_production": true
+    }
+  },
+
+  "testing_and_verification": {
+    "mandatory_before_completion": true,
+    "tests": [
+      "homepage loading",
+      "age verification",
+      "registration Telegram button",
+      "login page",
+      "iframe fallback",
+      "language switching",
+      "automatic language detection",
+      "slider autoplay",
+      "slider manual navigation",
+      "game click behavior",
+      "floating Telegram drag behavior",
+      "floating Telegram click behavior",
+      "audio toggle",
+      "footer links",
+      "terms page",
+      "privacy page",
+      "about page",
+      "contact page",
+      "partner page",
+      "daily jackpot persistence",
+      "jackpot daily reset at 00:00 Asia/Yerevan",
+      "admin login",
+      "admin logout",
+      "admin CRUD",
+      "media upload",
+      "translation editing",
+      "real-time content update",
+      "mobile layout",
+      "tablet layout",
+      "desktop layout",
+      "browser compatibility",
+      "404 handling",
+      "security checks",
+      "performance checks"
+    ],
+    "final_requirement": "Do not consider the project finished until all major workflows are tested and verified."
+  },
+
+  "important_implementation_notes": {
+    "iframe": "The provider website can only be embedded if the provider permits iframe framing. Never attempt to bypass X-Frame-Options or CSP. If embedding is blocked, use the professional fallback flow.",
+    "autoplay_audio": "Modern browser autoplay policies may prevent audible autoplay. Implement the requested behavior where permitted and provide a clean user-interaction fallback.",
+    "copy_protection": "Client-side copy blocking cannot guarantee that content cannot be copied. Implement reasonable deterrence without breaking the website.",
+    "zoom": "Complete browser zoom prevention is not reliably enforceable across all browsers/devices. Do not break accessibility purely to attempt absolute prevention.",
+    "admin_security": "Do not depend on a hidden URL as the sole protection mechanism. Use real server-side authentication and authorization.",
+    "generated_content": "Daily jackpot entries must be persisted server-side so every visitor sees the same daily dataset rather than receiving a different list on each refresh."
+  },
+
+  "final_output_instruction": {
+    "developer_should_return": [
+      "complete production-ready source code",
+      "all files",
+      "database setup",
+      "admin panel",
+      "configuration instructions",
+      "deployment instructions",
+      "default routes",
+      "default admin route",
+      "clear explanation of where the admin panel is located",
+      "clear explanation of where editable content is managed"
+    ],
+    "do_not_return": [
+      "partial snippets",
+      "pseudo-code",
+      "unfinished components",
+      "fake backend",
+      "fake admin panel",
+      "placeholder logic presented as complete functionality",
+      "unrelated features"
+    ],
+    "final_standard": "The project must feel like a real premium commercial website built by an experienced professional developer, with clean code, polished UX/UI, reliable functionality, strong security and no obvious AI-generated patterns."
+  }
+}
