@@ -1,0 +1,115 @@
+{
+  "role": "Senior Full-Stack Web Developer & UI/UX Expert",
+  "task": "Create a high-end, responsive, and secure presentation website and admin panel for a casino provider named YvnBet.",
+  "project_name": "YvnBet",
+  "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+  "architecture": {
+    "code_structure": "Strict separation of concerns. HTML, CSS, and JS must be in separate files (not inline). Code must be clean, commented, and written by industry standards.",
+    "responsiveness": "Fully adaptive for PC, smartphones, and tablets.",
+    "security": "Disable page zoom. Disable text selection and copy-pasting."
+  },
+  "ui_ux_design": {
+    "style": "Modern, premium, top-tier designer level with smooth CSS keyframe animations.",
+    "colors": {
+      "header_background": "#9A24AD",
+      "body_background": "#1D052C"
+    },
+    "typography": "Professional, easy to read. Use a text-based styled logo for 'YvnBet' instead of an image logo.",
+    "icons": "Use only professional SVG or icon libraries (e.g., FontAwesome). DO NOT use emojis."
+  },
+  "seo_meta": {
+    "keywords": ["YvnBet", "casino provider", "online casino", "казино", "онлайн казино", "կազինո", "առցանց կազինո", "YvnBet casino"]
+  },
+  "frontend_components": {
+    "header": {
+      "left": "Text logo: YvnBet",
+      "right_buttons": [
+        {
+          "name": "Մուտք",
+          "action": "Open a dedicated '/login' page that displays an iframe of 'https://ggplus.pro' taking up the full screen under our domain."
+        },
+        {
+          "name": "Գրանցում",
+          "action": "Redirect to Telegram link: t.me/yvnbet"
+        }
+      ]
+    },
+    "hero_section": {
+      "slider": {
+        "behavior": "Auto-scroll and manual swipe/click support.",
+        "slides_content": [
+          "+10 բոնուս ամեն լիցքավորման համար",
+          "ԴԱՀԿ-ն չի վերահսկում",
+          "100% գաղտնիություն",
+          "Շահելու մեծ հնարավորություն"
+        ]
+      },
+      "payment_methods": {
+        "display": "Positioned below the slider.",
+        "icons_required": ["LTC", "DASH", "SOL", "USDT"]
+      }
+    },
+    "live_jackpot_feed": {
+      "behavior": "A scrolling ticker showing randomly generated winners. It must look natural.",
+      "logic": "Generate exactly 12 names per day (resetting at 00:00). Drip them slowly throughout the 24 hours so it doesn't happen all at once. Names must be masked (e.g., arm** 5000 AMD, Tik*** 2000 AMD). Keep names consistent if repeated."
+    },
+    "floating_widget": {
+      "icon": "Telegram logo",
+      "position": "Right side preferred",
+      "behavior": "Draggable (up/down). Beautifully animated. On click, opens operator chat."
+    },
+    "audio_player": {
+      "behavior": "Autoplay on load (looping seamlessly, no stop button). Include only a sleek mute/unmute toggle button.",
+      "audio_source": "[PLACEHOLDER_FOR_URL]"
+    },
+    "footer": {
+      "content": "Only icons and links. No raw informational text.",
+      "elements": [
+        "18+ icon",
+        "Dynamic current year (auto-updating)",
+        "Text: Խաղա պատասխանատվությամբ",
+        "Payment method icons (LTC, DASH, SOL, USDT)",
+        "Links to separate pages: Կայքի պայմաները, Մեր մասին, Կապ մեզ հետ, Գաղտնիության քաղաքականություն, Գործընկերային ծրագիր"
+      ]
+    }
+  },
+  "separate_pages_content": {
+    "rule": "This content MUST NOT appear on the main page. Each section gets its own page linked from the footer.",
+    "conditions_and_rules": {
+      "title": "Կայքի կանոնները և դրույթները",
+      "text": [
+        "Մինչ կայքում գրանցվելը ծանոթացեք yvnbet կայքի կանոններին:",
+        "Կայքում կարող են գրանցվել 18+ տարին լրացած անձինք:",
+        "Մեկ օգտատերը կարող է ունենալ 1 հաշիվ: (մի քանի հաշիվ ունենալու դեպքում բլոկավորվելու է):",
+        "Կայքում առաջացած խնդիրների պատճառով yvnbet ընկերությունը պատասխանատվություն չի կրում:",
+        "Օպերատորի հետ վատ խոսելու կամ անհարգալից վերաբերմունք ցուցաբերելու դեպքում նա իրավունք ունի բլոկավորել օգտատիրոջը:"
+      ],
+      "financial_info": [
+        "Կայքում ցանկացած գործարք կատարվում է տելեգրամով՝ գրանցում, մուտքագրում, ելքագրում:",
+        "Նվազագույն լիցքավորումը 1500 AMD:",
+        "Նվազագույն ելքագրումը 2000 AMD:",
+        "Օրական մաքսիմալ դուրս բերումը հաշվից 200,000 AMD:",
+        "Ելքագրում ցանկացած կրիպտո հասցեի և բանկային քարտի՝ VISA, MASTERCARD, ARCA:",
+        "+10% ամեն դեպոզիտի վրա:"
+      ]
+    },
+    "about_us": {
+      "title": "YvnBet կայքի առավելությունները",
+      "text": [
+        "ԴԱՀԿ-ն չի վերահսկում ձեզ:",
+        "Օգտատերի անձնական տվյալները և ինֆորմացիան ոչ մի պետական մարմնի չի տրվում:",
+        "Օպերատորը միշտ պատրաստ է օգնել ձեզ կայքի հետ կապված հարցերով:",
+        "Կայքում գրանցումը 100% գաղտնի է:",
+        "+10% բոնուս ամեն լիցքավորման համար:"
+      ]
+    },
+    "partner_program": {
+      "title": "Գործընկերային ծրագիր",
+      "text": "Ունե՞ք ալիքներ, էջեր կամ կայքեր: Ցանկանու՞մ եք համագործակցել մեզ հետ և վաստակել գումար: Կապ հաստատեք մեզ հետ:"
+    }
+  },
+  "admin_panel": {
+    "requirements": "Create a fully functional, professional CMS/Admin panel.",
+    "features": "The admin must be able to change slider images, update texts, edit rules, and manage the jackpot feed generator dynamically. Changes must reflect on the live website in real-time immediately after saving, without requiring code deployment."
+  }
+}
