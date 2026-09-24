@@ -1,0 +1,142 @@
+{
+  "project_metadata": {
+    "project_name": "YvnBet Casino Platform",
+    "role": "Senior Full-Stack Developer & UI/UX Designer",
+    "style_guide": "Modern, Dark Theme, High-End Casino Aesthetic, Responsive, Professional Clean Code",
+    "output_format": "Single HTML file containing embedded CSS and JS (for initial prototype), scalable architecture for backend integration"
+  },
+  "design_system": {
+    "color_palette": {
+      "primary_header_bg": "#9A24AD",
+      "body_background": "#1D052C",
+      "text_color": "#FFFFFF",
+      "accent_color": "#FFD700",
+      "button_gradient": "linear-gradient(45deg, #9A24AD, #6a1b9a)"
+    },
+    "typography": {
+      "font_family": "'Montserrat', 'Roboto', sans-serif",
+      "logo_style": "Text-based, stylized, bold, no image logo"
+    },
+    "animations": {
+      "type": "CSS Keyframes",
+      "effects": [
+        "Smooth hover transitions on buttons",
+        "Floating Telegram widget animation",
+        "Slider fade/slide effects",
+        "Jackpot number rolling effect"
+      ]
+    },
+    "responsiveness": "Mobile-first, fully adaptive for Desktop, Tablet, Smartphone. No zoom allowed."
+  },
+  "functional_requirements": {
+    "header": {
+      "left": "Text Logo: 'YvnBet' (Stylized)",
+      "right_buttons": [
+        {
+          "label": "Մուտք (Login)",
+          "action": "Open iframe modal loading https://ggplus.pro full screen within the current domain context"
+        },
+        {
+          "label": "Գրանցում (Register)",
+          "action": "Redirect to Telegram: t.me/yvnbet"
+        }
+      ]
+    },
+    "hero_section": {
+      "component": "Auto-playing Slider with manual controls",
+      "slides": [
+        "+10% Bonus on every deposit",
+        "No RKN (State) Control",
+        "100% Privacy & Anonymity",
+        "High Winning Opportunities"
+      ],
+      "note": "Generate professional placeholder images for these slides using image generation logic or high-quality placeholders."
+    },
+    "payment_methods_display": {
+      "location": "Below slider",
+      "icons_only": true,
+      "currencies": ["LTC", "USDT", "SOL", "DASH"],
+      "style": "Clean vector icons, no emojis"
+    },
+    "jackpot_section": {
+      "logic": "Daily rotating list of 12 unique winners",
+      "format": "Name*** Amount AMD (e.g., Arm*** 5000 AMD)",
+      "behavior": "Generates new names at 00:00 daily. Displays sequentially (not all at once) to simulate live activity. Names must not repeat within the same day.",
+      "display": "Scrolling ticker or list view"
+    },
+    "games_section": {
+      "layout": "Grid of game thumbnails",
+      "interaction": "Clicking a game opens the specific game link/provider page",
+      "content": "Professional casino game imagery"
+    },
+    "floating_widget": {
+      "element": "Telegram Logo",
+      "position": "Fixed, draggable (up/down/left/right), preferably starting right side",
+      "action": "Opens chat with operator",
+      "animation": "Pulse or float animation"
+    },
+    "audio_control": {
+      "feature": "Background music player",
+      "default": "Auto-play ON",
+      "control": "Toggle button to Mute/Unmute",
+      "loop": "Infinite loop, no stop button, just mute toggle"
+    },
+    "footer": {
+      "columns": [
+        {
+          "title": "Information",
+          "links": [
+            "About Us (Opens dedicated page/modal)",
+            "Terms & Conditions (Opens dedicated page/modal)",
+            "Privacy Policy (Opens dedicated page/modal)",
+            "Contact Us (Opens dedicated page/modal)"
+          ]
+        },
+        {
+          "title": "Partner Program",
+          "description": "Refined text: 'Have channels, pages, or websites? Want to collaborate and earn? Contact us.'",
+          "action": "Link to contact/operator"
+        },
+        {
+          "title": "Payment Icons",
+          "icons": ["LTC", "DASH", "SOL", "USDT"]
+        }
+      ],
+      "badges": [
+        "18+ Icon",
+        "Play Responsibly Icon"
+      ],
+      "copyright": "Dynamic Year (Auto-update)",
+      "disclaimer": "YvnBet is not responsible for technical issues. Disrespectful behavior towards operators results in ban. One account per user."
+    },
+    "security_restrictions": {
+      "disable_right_click": true,
+      "disable_text_selection": true,
+      "disable_zoom": true
+    }
+  },
+  "content_rules": {
+    "languages_supported": ["Armenian", "Russian", "English"],
+    "meta_keywords": "casino, yvnbet, crypto casino, slots, poker, Armenia, Russia, English, LTC, USDT, SOL, DASH",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "prohibited_content": [
+      "Do NOT explicitly state 'Multilingual Support' as a feature text",
+      "Do NOT use phrases like 'Professional Gaming Platform'",
+      "Do NOT show Terms/Rules directly on the homepage body (only in footer links)",
+      "Do NOT show Partner Program details directly (only in footer link)"
+    ],
+    "financial_rules_display": {
+      "min_deposit": "1500 AMD",
+      "min_withdrawal": "2000 AMD",
+      "max_daily_withdrawal": "200,000 AMD",
+      "withdrawal_methods": "Crypto any address, VISA, MASTERCARD, ARCA",
+      "bonus": "+10% on every deposit"
+    }
+  },
+  "technical_implementation_notes": {
+    "code_structure": "Clean, semantic HTML5, Modern CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+). No external heavy frameworks unless necessary for slider.",
+    "iframe_handling": "The Login button must trigger a full-screen overlay iframe pointing to ggplus.pro, styled to look seamless within the YvnBet domain.",
+    "admin_panel_note": "Prepare structure for future Admin Panel integration (JSON-based content management ready), but do not build the UI for it now.",
+    "image_generation": "Use internal tools to generate high-quality casino-themed images for sliders and game thumbnails if real assets are not provided."
+  }
+}
