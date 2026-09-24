@@ -1,0 +1,207 @@
+{
+  "role": "Դու սենյակավագ senior full-stack developer ես 10+ տարվա փորձով՝ modern web design-ի և UX/UI-ի մասնագետ։ Աշխատում ես մաքուր, պրոֆեսիոնալ, առանց սխալների կոդով՝ այնպես, կարծես պատվերը կատարում է top-level ստուդիան։ Կոդը պետք է տարբերվի որպես մարդու աշխատանք, ոչ թե AI-ի։",
+
+  "project": {
+    "brand": "YvnBet",
+    "type": "Առցանց կազինոյի գովազդային (affiliate) կայք",
+    "tagline": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "provider_site": "https://ggplus.pro",
+    "telegram": "https://t.me/yvnbet",
+    "languages": ["hy", "ru", "en"],
+    "default_language": "hy"
+  },
+
+  "critical_rules": {
+    "no_logo_image": "Լոգո նկար չլինի։ Միայն «YvnBet» տեքստը՝ գեղեցիք տառային ոճով (custom typography, gradient/glow)։",
+    "no_emojis": "Ամեն ինչ icon-ներով լինի (inline SVG կամ Font Awesome), ոչ թե emoji-ներով։",
+    "no_inline_code": "Կոդը երբեք ուղղակի HTML-ի մեջ չդրվի։ Առանձին ֆայլեր՝ index.html, css/style.css, css/animations.css, js/main.js, js/slider.js, js/jackpot.js, js/audio.js, js/i18n.js, js/admin.js և այլն։",
+    "do_not_mention_on_main_page": "Գլխավոր էջում ՉԻ գրվում՝ «եռալեզու սպասարկում», «պրոֆեսիոնալ խաղային հարթակ» և նման ընդհանուր կոնտեքստներ։ Լեզվի ընտրիչը լինի, բայց որպես առանձնահատկություն չգովազդվի։ Կանոները, դրույթները, «Մեր մասին»-ը, «Գաղտնիության քաղաքականություն»-ը և Partner ծրագիրը գլխավոր էջում ուղղակի չեն երևում՝ միայն footer-ի հղումներով են բացվում իրենց առանձին էջերում։",
+    "all_transactions_via_telegram": "Կայքում նշվի, որ ցանկացած գործարք (գրանցում, լիցքավորում, ելքագրում) կատարվում է Telegram-ով։"
+  },
+
+  "design": {
+    "style": "Ժամանակակից, premium, տարբերվող դիզայն՝ top designer-ի մակարդակով։ Dark luxury + neon accents։",
+    "colors": {
+      "header": "#9A24AD",
+      "background": "#1D052C",
+      "accent_gradient": ["#9A24AD", "#E15BFF", "#FFB13D"],
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#C9B3D9",
+      "card_background": "#2A0B3D"
+    },
+    "typography": "Montserrat կամ Poppins (Google Fonts), տառատեսակները հայերեն/ռուսերեն/անգլերեն subset-ներով։",
+    "animations": "CSS keyframes-ով՝ smooth fade/slide transitions, hover effects, button glow, slider auto-play, jackpot row reveal animation (fade-up), Telegram FAB pulse։ Անիմացիաները մաքուր ու 60fps լինեն։",
+    "responsive": "Ամբողջովին հարմարվի ցանկացած էկրանի՝ desktop, laptop, tablet, smartphone (mobile-first)։",
+    "compatibility": "Աշխատի բոլոր ժամանակակից բրաուզերներում (Chrome, Firefox, Safari, Edge, Opera) և iOS/Android-ում՝ vendor prefixes-ով և graceful fallback-ներով։"
+  },
+
+  "header": {
+    "layout": "Ձախում՝ «YvnBet» տեքստային լոգո, աջում՝ կողք կողքի կոճակներ։ Sticky header՝ blur էֆեկտով, սքրոլի ժամանակ մի փոքր ստվերավորվի։",
+    "buttons": [
+      { "label": "Մուտք", "action": "Բացի login modal՝ ամբողջ էկրանով iframe https://ggplus.pro (մեր դոմեյնի տակ, լիովին լիչժես չափսերով)։ Եթե դոմեյնը X-Frame-Options/CSP-ով արգելում է iframe-ը, fallback՝ բացի նոր tab-ով։" },
+      { "label": "Գրանցում", "action": "Բացի https://t.me/yvnbet նոր tab-ով։" }
+    ],
+    "language_switcher": "hy / ru / en dropdown, աշխատի i18n-ով (js/i18n.js), ընտրությունը պահպանվի localStorage-ում։"
+  },
+
+  "main_page_sections": {
+    "slider": {
+      "type": "Auto-play + swipe (touch) + drag (mouse) + arrows + dots։ Թերթվի նաև ձեռքով, անվերջ loop-ով, առանց «ցատկի»։",
+      "images": "Գեներացրու կամ դիր պրեմիում որակի կազինո թեմատիկ նկարներ (slots, roulette, cards, coins)՝ admin panel-ից փոխարինելի։",
+      "slides": [
+        { "title": "+10% բոնուս ամեն լիցքավորման համար", "cta": { "text": "Լիցքավորել", "action": "telegram" } },
+        { "title": "ԴԱՀԿ-ն չի վերահսկում", "cta": { "text": "Սկսել խաղալ", "action": "register" } },
+        { "title": "100% գաղտնիություն", "cta": { "text": "Միանալ", "action": "register" } },
+        { "title": "Շահելու մեծ հնարավորություն", "cta": { "text": "Փորձիր հիմա", "action": "register" } }
+      ]
+    },
+    "payment_methods": {
+      "position": "Slider-ի անմիջապես տակ՝ առանձին շերտ (strip)։",
+      "items": ["LTC", "USDT", "SOL", "DASH"],
+      "render": "Յուրաքանչյուրի համար պաշտոնական SVG icon (crypto logo), hover-ի ժամանակ փայլի անիմացիա։ Գրվի «Լիցքավորման միջոցներ» վերնագիր։"
+    },
+    "games": {
+      "title": "Խաղեր",
+      "layout": "Responsive grid-ով խաղաքարտեր՝ խաղի նկարով և անվանմամբ։ Hover-ի ժամանակ card-ը մեծանա ու ցույց տա «Խաղալ» կոճակ։",
+      "click_action": "Խաղի վրա սեղմելիս բացի այդ խաղը (provider-ի խաղի URL՝ GAME_URL_TEMPLATE placeholder, admin panel-ից խմբագրելի)։"
+    },
+    "advantages": {
+      "title": "Ինչու YvnBet",
+      "layout": "Icon + title + short text՝ քարտերով, scroll-ի ժամանակ fade-in անիմացիայով։",
+      "items": [
+        { "icon": "shield-off", "text": "ԴԱՀԿ-ն չի վերահսկում ձեզ" },
+        { "icon": "lock", "text": "Անձնական տվյալները և ինֆորմացիան ոչ մի պետական մարմնի չի տրվում" },
+        { "icon": "headset", "text": "Օպերատորը միշտ պատրաստ է օգնել կայքի հետ կապված հարցերով" },
+        { "icon": "eye-slash", "text": "Կայքում գրանցումը 100% գաղտնի է" },
+        { "icon": "gift", "text": "Ամեն լիցքավորման համար +10% բոնուս" }
+      ]
+    },
+    "limits": {
+      "position": "Առավելությունների տակ՝ առանձին բլոկ, սիրուն ձևավորված (tables/cards)։",
+      "items": [
+        "Նվազագույն լիցքավորում՝ 1500 AMD",
+        "Նվազագույն ելքագրում՝ 2000 AMD",
+        "Օրական մաքսիմալ ելքագրում հաշվից՝ 200.000 AMD",
+        "Ելքագրում՝ ցանկացած կրիպտո հասցեի և բանկային քարտերի՝ VISA, Mastercard, ARCA",
+        "Բոլոր գործարքները՝ Telegram-ով"
+      ]
+    },
+    "jackpot_feed": {
+      "title": "Վերջին շահումները",
+      "format": "arm** 5000 AMD, Tik*** 2000 AMD, Hov*** 67000 AMD",
+      "logic": [
+        "Օրական 12 անուն։",
+        "Անունները գեներացվում են օրվա ամսաթվով date-seeded deterministic PRNG-ով (օր.՝ seed = YYYY-MM-DD, Asia/Yerevan ժամային գոտի)։ Նույն օրը բոլոր այցելուները տեսնում են նույն ցանկը։",
+        "Միևնույն օրվա մեջ անունները չեն կրկնվում։",
+        "Ամեն նոր օր (00:00)՝ նոր 12 անուն։",
+        "Ցանկը միանգամից չի ցուցադրվում։ 12-ը բաժանվում են օրվա ընթացքում՝ մոտավորապես յուրաքանչյուր 90–150 րոպեը մեկ նոր տող հայտնվի fade-up անիմացիայով, որպեսզի չզգացվի, որ ավտոմատ է։",
+        "Թերթվող ցանկ (auto-scroll marquee)՝ նոր շահումները վերևից ավելանան։",
+        "Գումարները ռեալիստիկ AMD range-ում՝ 1000–100000։",
+        "Առանց backend-ի աշխատի client-side (seeded PRNG + localStorage timestamp), backend-ի դեպքում՝ API endpoint-ով։"
+      ]
+    }
+  },
+
+  "floating_elements": {
+    "telegram_fab": {
+      "position": "Աջ կողմում, draggable՝ կարելի է քաշել վերև-ներքև, ձախ-աջ։",
+      "behavior": "Drag-ը և click-ը տարանջատված լինեն (pointer events + threshold)՝ քաշելիս չբացվի, սեղմելիս բացվի օպերատորի չատը (https://t.me/yvnbet)։",
+      "animation": "Smooth pulse/glow անիմացիա, քաշելիս՝ scale effect, բացթողումից հետո՝ soft settle spring։",
+      "icon": "Telegram-ի պաշտոնական SVG լոգո։",
+      "position_memory": "Տեղը պահպանվի localStorage-ում։"
+    },
+    "sound": {
+      "file_url": "AUDIO_URL_PLACEHOLDER",
+      "behavior": "Մուտք գործելիս փորձի ավտոմատ միացնել։ Եթե բրաուզերի autoplay policy-ն արգելում է (iOS/Chrome), առաջին user interaction-ի ժամանակ (ցանկացած click/touch) միացվի առանց prompt-ի։",
+      "loop": "Անվերջ կրկնվի (loop), stop չունենա։",
+      "toggle": "Header-ում կամ անկյունում speaker icon-ով կոճակ՝ միացնել/անջատել, state-ը պահպանվի localStorage-ում։"
+    }
+  },
+
+  "protection": {
+    "zoom": "<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'> + iOS double-tap zoom կանխում (touch-action, preventDefault on dblclick/gesturestart)։",
+    "copy": "contextmenu preventDefault, CSS user-select:none, copy/cut event-ների արգելում, F12/devtools shortcut-ների կանխում։",
+    "note": "Աշխատի մաքուր, առանց console error-ների, չխանգարի կայքի նորմալ օգտագործմանը։"
+  },
+
+  "footer": {
+    "layout": "4 սյուն՝ Brand + կարգախոս, Հղումներ, Վճարման միջոցներ, Իրավական։",
+    "columns": {
+      "brand": "YvnBet + կարգախոս + կարճ նկարագրություն",
+      "links": [
+        { "label": "Կայքի պայմաններ և դրույթներ", "page": "terms.html" },
+        { "label": "Մեր մասին", "page": "about.html" },
+        { "label": "Կապ մեզ հետ", "page": "contact.html" },
+        { "label": "Գաղտնիության քաղաքականություն", "page": "privacy.html" },
+        { "label": "Գործընկերային ծրագիր", "page": "partners.html" }
+      ],
+      "payments": "LTC, DASH, SOL, USDT՝ SVG icon-ներով։",
+      "legal": "18+ icon (SVG badge), «Խաղա պատասխանատվությամբ» տեքստ, © {current_year} YvnBet — տարեթիվը ավտոմատ թարմացվի JS-ով (new Date().getFullYear())։"
+    },
+    "behavior": "Footer-ի ամեն հղում բացի իր առանձին էջը իր բովանդակությամբ։"
+  },
+
+  "pages": {
+    "terms.html": {
+      "title": "Կայքի կանոններ և դրույթներ",
+      "content": [
+        "Մինչ կայքում գրանցվելը ծանոթացեք YvnBet կայքի կանոններին։",
+        "Կայքում կարող են գրանցվել միայն 18+ տարին լրացած անձիք։",
+        "Մեկ օգտատերը կարող է ունենալ միայն 1 հաշիվ։ Մի քանի հաշիվ ունենալու դեպքում բոլոր հաշիվները բլոկավորվում են։",
+        "Կայքում առաջացած խնդիրների պատճառով YvnBet ընկերությունը պատասխանատվություն չի կրում։",
+        "Օպերատորի հետ վատ խոսելու կամ անհարգալից վերաբերմունք ցուցաբերելու դեպքում օպերատորն իրավունք ունի բլոկավորել օգտատիրոջը։",
+        "Բոլոր գործարքները (գրանցում, լիցքավորում, ելքագրում) կատարվում են Telegram-ով։",
+        "Նվազագույն լիցքավորում՝ 1500 AMD, նվազագույն ելքագրում՝ 2000 AMD, օրական մաքսիմալ ելքագրում՝ 200.000 AMD։"
+      ]
+    },
+    "about.html": { "content": "YvnBet-ի մասին՝ կազինո թեմատիկ, առավելությունների կրկնություն, նկարներով։ Առանց «պրոֆեսիոնալ հարթակ» և «եռալեզու» ընդհանուր արտահայտությունների։" },
+    "contact.html": { "content": "Կապ՝ Telegram կոճակ (https://t.me/yvnbet), աշխատանքային ժամեր՝ 24/7, contact form՝ form-ի ուղարկումը Telegram-ով։" },
+    "privacy.html": { "content": "Գաղտնիության քաղաքականություն՝ տվյալների չհաղորդում երրորդ անձանց/պետական մարմիններին, գաղտնի գրանցում, cookies օգտագործում։" },
+    "partners.html": {
+      "title": "Գործընկերային ծրագիր",
+      "content": "Ունե՞ք ալիք, էջ կամ կայք։ Դարձրեք ձեր լսարանը կայուն եկամտի աղբյուր՝ միացեք YvnBet-ի գործընկերային ծրագրին և վաստակեք յուրաքանչյուր ակտիվ խաղացողի համար։ Պայմանները քննարկելու համար գրեք մեզ Telegram-ով։",
+      "cta": { "text": "Գրել մեզ", "action": "https://t.me/yvnbet" }
+    }
+  },
+
+  "seo": {
+    "meta_keywords": {
+      "hy": "yvnbet, կազինո, առցանց կազինո, խաղատուն, սլոտներ, ռուլետկա, բոնուս, կրիպտո կազինո, լիցքավորում, ելքագրում, ջեքփոթ",
+      "ru": "yvnbet, казино, онлайн казино, слоты, рулетка, бонус, крипто казино, депозит, вывод, джекпот",
+      "en": "yvnbet, casino, online casino, slots, roulette, bonus, crypto casino, deposit, withdrawal, jackpot"
+    },
+    "meta_description": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։ +10% բոնուս ամեն լիցքավորման համար, 100% գաղտնիություն, արագ ելքագրում։",
+    "language_alternates": "hreflang tags՝ hy, ru, en։"
+  },
+
+  "admin_panel": {
+    "include": true,
+    "note": "Առանձին /admin բաժին՝ login-protected (password/session auth)։",
+    "features": [
+      "Sliders-ի CRUD՝ նկար վերբեռնել/փոխել, տեքստ խմբագրել, հերթականություն, միացնել/անջատել։",
+      "Խաղերի CRUD՝ նկար, անուն, խաղի URL ավելացնել/փոխել/հեռացնել։",
+      "Տեքստերի խմբագրում՝ առավելություններ, limits, footer, բոլոր 3 լեզուներով։",
+      "Vճարման միջոցների կառավարում։",
+      "Jackpot settings՝ անունների քանակ, ցուցադրման ինտերվալ, AMD range։",
+      "Հղումների կառավարում՝ provider URL, Telegram URL, audio URL։",
+      "Բոլոր փոփոխությունները իրական ժամանակում արտացոլվեն կայքում (realtime, օր.՝ Firebase Realtime Database/Supabase realtime կամ polling)՝ հաստատելուն պես, առանց էջը refresh անելու։",
+      "Media manager՝ նկարների վերբեռնում/ջնջում, drag-drop։",
+      "Մանրակրկիտ, առանց սխալների, validation-ով և success/error feedback-ով։"
+    ]
+  },
+
+  "code_quality": {
+    "structure": "Մաքուր BEM CSS, modular JS (IIFE/ES modules), իմաստալից անուններով ֆայլեր ու փոփոխականներ, առանց dead code-ի։",
+    "no_console_errors": "Զրո console error/warning։",
+    "performance": "Lazy-load նկարների համար, minified-ready, արագ բեռնում։",
+    "accessibility": "aria-labels, keyboard navigation, focus states։"
+  },
+
+  "deliverables": [
+    "index.html",
+    "css/style.css, css/animations.css, css/admin.css",
+    "js/main.js, js/slider.js, js/jackpot.js, js/audio.js, js/i18n.js, js/telegram-fab.js, js/admin.js",
+    "pages/terms.html, pages/about.html, pages/contact.html, pages/privacy.html, pages/partners.html",
+    "assets/images/ (slider + games + generated visuals), assets/icons/ (SVG)"
+  ]
+}
