@@ -1,0 +1,222 @@
+{
+  "project": {
+    "name": "YvnBet",
+    "type": "Responsive casino landing website",
+    "purpose": "Present YvnBet to casino providers and visitors through a modern, polished, trustworthy-looking website.",
+    "tagline": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "language": "hy",
+    "localization": {
+      "supported": ["hy", "ru", "en"],
+      "default": "hy",
+      "requirement": "Prepare the website architecture for Armenian, Russian, and English localization. Do not place a visible statement such as 'three-language support' on the main page. The language mechanism may be represented by a compact icon or selector when appropriate."
+    }
+  },
+  "brand_and_visual_direction": {
+    "brand_mark": "Do not use an external logo image. Display only the text 'YvnBet' as a distinctive, elegant typographic wordmark.",
+    "style": [
+      "Premium modern casino aesthetic",
+      "Clean and professional UI/UX",
+      "Distinctive visual identity",
+      "Strong contrast and readable typography",
+      "Smooth, subtle micro-interactions",
+      "No emojis; use consistent line or filled icons instead"
+    ],
+    "colors": {
+      "header": "#9A24AD",
+      "background": "#1D052C",
+      "surface": "Use layered dark-purple surfaces with accessible contrast",
+      "accent": "Use refined purple, magenta, and light accent colors consistently"
+    },
+    "responsive": "Fully responsive on desktop, tablet, and smartphone screens.",
+    "animation": "Use performant CSS keyframe animations and transitions. Animations must be elegant, smooth, non-distracting, and respect prefers-reduced-motion."
+  },
+  "main_page": {
+    "header": {
+      "layout": "Sticky responsive header",
+      "left": "Text-style YvnBet wordmark",
+      "right": {
+        "buttons": [
+          {
+            "label": "Մուտք",
+            "action": "Open https://ggplus.pro in a full-size login experience. Prefer same-domain presentation only when technically and legally permitted by the provider; otherwise open the provider site safely in a new tab or fallback view. Do not bypass iframe restrictions such as CSP or X-Frame-Options."
+          },
+          {
+            "label": "Գրանցում",
+            "action": "Open the Telegram operator chat: https://t.me/yvnbet"
+          }
+        ]
+      }
+    },
+    "hero": {
+      "content": "Create a visually strong introduction to YvnBet without using prohibited generic claims such as 'professional gaming platform'. Keep the message focused on casino entertainment, available benefits, and clear calls to action.",
+      "primary_actions": ["Մուտք", "Գրանցում"]
+    },
+    "benefits_slider": {
+      "position": "Centered in the main content area",
+      "behavior": "Autoplay, manual navigation, swipe support, pause when focused or hovered, and accessible previous/next controls.",
+      "slides": [
+        {
+          "title": "+10% բոնուս յուրաքանչյուր լիցքավորման համար",
+          "visual": "Generate or use a premium casino-themed promotional image."
+        },
+        {
+          "title": "ԴԱՀԿ-ն չի վերահսկում ձեզ",
+          "visual": "Generate or use a tasteful privacy-themed casino image."
+        },
+        {
+          "title": "100% գաղտնիություն",
+          "visual": "Generate or use a secure, discreet casino-themed image."
+        },
+        {
+          "title": "Շահելու մեծ հնարավորություն",
+          "visual": "Generate or use an exciting but tasteful casino-themed image."
+        }
+      ]
+    },
+    "payment_methods": {
+      "title": "Լիցքավորման միջոցները",
+      "methods": ["USDT", "DASH", "LTC", "SOL"],
+      "visual": "Display recognizable payment/cryptocurrency icons in a consistent icon style, never as emojis."
+    },
+    "games_section": {
+      "requirement": "Show casino game cards with generated or supplied game images. Clicking a card must open a dedicated game-information view or page.",
+      "card_content": ["Game image", "Game name", "Short description", "Open/details action"]
+    },
+    "jackpot_feed": {
+      "title": "Վերջին շահումներ",
+      "behavior": "Display a horizontally scrollable or vertically cycling list of masked winner names and AMD amounts.",
+      "examples": ["Arm** — 5,000 AMD", "Tik*** — 2,000 AMD", "Hov*** — 67,000 AMD"],
+      "privacy": "Always mask names. Never expose real personal information.",
+      "daily_generation": {
+        "count": 12,
+        "reset": "Generate a new daily set at 00:00 local time.",
+        "distribution": "Reveal entries gradually across the day rather than all at once, with randomized but controlled timing.",
+        "consistency": "Keep the same daily set for all visitors during that calendar day and prevent duplicate names within the same set unless explicitly configured. Use a deterministic server-side or securely seeded daily dataset rather than generating deceptive real-time claims."
+      }
+    },
+    "floating_telegram": {
+      "icon": "Use a Telegram icon, not an emoji.",
+      "position": "Default to the right side of the viewport.",
+      "behavior": "Draggable vertically and horizontally within safe viewport boundaries, with a refined animated idle effect. Clicking opens https://t.me/yvnbet.",
+      "accessibility": "Include an accessible label and keyboard focus state."
+    },
+    "audio": {
+      "source": "Leave the audio URL empty/configurable so the site owner can add it later.",
+      "behavior": "Attempt autoplay only when supported and permitted by the browser. Provide a visible mute/unmute toggle. Loop continuously, without a stop button. If autoplay is blocked, keep the control available and do not break the page."
+    }
+  },
+  "footer": {
+    "requirements": [
+      "18+ icon",
+      "Responsible gambling message: Խաղա՛ պատասխանատվությամբ։",
+      "Automatic current year that updates every year",
+      "Payment method icons: LTC, DASH, SOL, USDT",
+      "Contact us link",
+      "About us link",
+      "Terms and conditions link",
+      "Privacy policy link",
+      "Partner program link"
+    ],
+    "partner_program_copy": "Ունե՞ք ալիք, էջ կամ կայք և ցանկանո՞ւմ եք համագործակցել մեզ հետ ու վաստակել։ Կապ հաստատեք մեզ հետ։",
+    "navigation": "Every footer item must be clickable and open its own dedicated page or route. Do not display the full terms, privacy policy, or partner-program content directly on the home page."
+  },
+  "dedicated_pages": {
+    "terms_and_conditions": {
+      "content": [
+        "Before registering, users must read the YvnBet terms and conditions.",
+        "Only persons aged 18 or older may register.",
+        "Each user may have only one account. Multiple accounts may lead to account blocking.",
+        "YvnBet is not responsible for issues caused by circumstances outside its reasonable control; phrase this clearly and subject to applicable law.",
+        "Abusive, threatening, or disrespectful communication with the operator may result in account restrictions or blocking, subject to applicable law and a fair review process.",
+        "All registration, login, deposit, withdrawal, and support operations are handled through Telegram or the designated provider flow.",
+        "Minimum deposit: 1,500 AMD.",
+        "Minimum withdrawal: 2,000 AMD.",
+        "Maximum daily withdrawal: 200,000 AMD.",
+        "Withdrawals may be requested to supported cryptocurrency addresses and VISA, Mastercard, or ARCA cards, subject to availability and verification.",
+        "+10% bonus on each deposit, subject to the applicable bonus terms."
+      ]
+    },
+    "privacy_policy": {
+      "content": "Create a dedicated privacy-policy page explaining data handling, confidentiality, communications, cookies, third-party services, and user rights in clear language. Do not make absolute claims that conflict with applicable law."
+    },
+    "about_us": {
+      "content": "Create a dedicated About YvnBet page focused only on the casino service, its operating principles, user support, and available payment options."
+    },
+    "contact": {
+      "content": "Create a dedicated contact page with a clear Telegram operator CTA linking to https://t.me/yvnbet."
+    },
+    "partner_program": {
+      "content": "Create a dedicated partner-program page using the polished copy from the footer and a Telegram contact CTA."
+    },
+    "game_details": {
+      "content": "Each game card must open its own details view or route with image, title, description, and a clear action."
+    }
+  },
+  "operational_information": {
+    "telegram_notice": "Clearly state in the appropriate terms/contact content that registration, login, deposits, withdrawals, and support are conducted through Telegram or the designated provider flow. Do not clutter the home page with long operational notices.",
+    "financial_details": [
+      "Minimum deposit: 1,500 AMD",
+      "Minimum withdrawal: 2,000 AMD",
+      "Daily withdrawal limit: 200,000 AMD",
+      "Deposit bonus: +10% subject to bonus terms",
+      "Supported deposit/payment labels: LTC, USDT, SOL, DASH",
+      "Supported withdrawal routes: supported crypto addresses and VISA, Mastercard, ARCA where available"
+    ]
+  },
+  "seo": {
+    "title": "YvnBet — Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "description": "YvnBet casino website with casino games, promotions, payment options, and Telegram-based registration and support.",
+    "meta_keywords": {
+      "hy": ["կազինո", "օնլայն կազինո", "YvnBet", "կազինո խաղեր", "կրիպտո վճարումներ"],
+      "ru": ["казино", "онлайн казино", "YvnBet", "казино игры", "криптовалютные платежи"],
+      "en": ["casino", "online casino", "YvnBet", "casino games", "crypto payments"]
+    },
+    "requirements": ["Use semantic HTML, canonical metadata, Open Graph metadata, descriptive alt text, and structured accessible headings."]
+  },
+  "technical_requirements": {
+    "architecture": "Keep the implementation clean, modular, maintainable, and production-oriented.",
+    "files": "Organize HTML, CSS, JavaScript, assets, and route/page content into a clear project structure. Do not place everything into one unmaintainable file unless the target platform explicitly requires a single-file output.",
+    "browser_support": "Support current Chrome, Firefox, Safari, Edge, Android browsers, and iOS Safari with graceful fallbacks.",
+    "security": [
+      "Do not expose secrets, private API keys, admin credentials, or sensitive configuration in client-side code.",
+      "Sanitize dynamic content and use safe external-link attributes where appropriate.",
+      "Do not attempt to circumvent provider security restrictions or iframe policies."
+    ],
+    "accessibility": [
+      "Keyboard navigable controls",
+      "Visible focus states",
+      "Accessible labels for icon buttons",
+      "Sufficient color contrast",
+      "Reduced-motion support",
+      "Alt text for meaningful images"
+    ],
+    "interaction_quality": "All buttons, links, sliders, page routes, hover states, mobile menus, audio controls, and Telegram actions must work correctly and visibly respond to user input.",
+    "zoom_and_copy": "Do not disable browser zoom or copying by default. Preserve accessibility and standard browser behavior; protect only genuinely sensitive fields through normal security practices."
+  },
+  "admin_scope": {
+    "current_phase": "Do not build an admin panel in the initial public website unless explicitly requested as a separate phase.",
+    "future_readiness": "Keep content, slider images, game data, payment methods, jackpot-feed configuration, and page copy structured so a future authenticated admin panel can manage them safely."
+  },
+  "content_restrictions": [
+    "Do not show the terms, privacy policy, or partner-program text directly on the home page; link to dedicated pages instead.",
+    "Do not use another casino's logo or brand name.",
+    "Do not describe the site with the prohibited generic phrase 'professional gaming platform' or similar wording.",
+    "Do not display multilingual-support claims as plain promotional text on the home page.",
+    "Use icons instead of emojis throughout the interface.",
+    "Keep responsible-gambling and age-18 messaging visible and clear."
+  ],
+  "acceptance_criteria": [
+    "The site looks polished and distinctive on desktop, tablet, and mobile.",
+    "The YvnBet wordmark appears as text and no unrelated logo is present.",
+    "Login and registration buttons perform the specified actions with safe provider fallbacks.",
+    "The slider supports autoplay, manual navigation, swipe, and accessibility controls.",
+    "Game cards open dedicated details views.",
+    "The daily jackpot feed is consistent, masked, gradually revealed, and privacy-conscious.",
+    "Footer links open their own pages or routes.",
+    "The current year updates automatically.",
+    "Telegram floating control is draggable, animated, accessible, and functional.",
+    "Audio is configurable, loops when enabled, and has mute/unmute control without breaking autoplay policies.",
+    "No secrets are exposed and no provider security restrictions are bypassed.",
+    "All visible interactions and animations work without console errors."
+  ]
+}
