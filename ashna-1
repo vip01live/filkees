@@ -1,0 +1,660 @@
+{
+  "project": {
+    "name": "YvnBet",
+    "type": "Responsive casino provider presentation website",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "current_scope": "Public website only",
+    "admin_panel": {
+      "enabled_now": false,
+      "future_ready": true,
+      "note": "Կառուցվածքը պետք է պատրաստ լինի ապագայում admin panel միացնելու համար, սակայն այս տարբերակում admin interface չպատրաստել։"
+    }
+  },
+
+"developer_instructions": {
+    "role": "Act as a senior UI/UX and front-end developer with extensive production experience.",
+    "quality": [
+      "Write clean, maintainable and production-ready code.",
+      "Do not make the code look AI-generated.",
+      "Use semantic HTML5 and modular JavaScript.",
+      "Use BEM naming convention for CSS classes.",
+      "Do not place CSS or JavaScript directly inside HTML.",
+      "Keep all assets, styles and scripts in organized folders.",
+      "Add comments only where they are technically useful.",
+      "All buttons and interactions must work correctly.",
+      "Do not use emojis; use SVG icons only."
+    ]
+  },
+
+"technical_stack": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript ES6+"
+    ],
+    "optional_libraries": [
+      "Swiper.js or custom JavaScript slider",
+      "Lucide SVG icons or custom SVG icon set"
+    ],
+    "folder_structure": {
+      "root": [
+        "index.html"
+      ],
+      "pages": [
+        "login.html",
+        "terms.html",
+        "about.html",
+        "contact.html",
+        "privacy.html",
+        "partners.html"
+      ],
+      "css": [
+        "css/main.css",
+        "css/components.css",
+        "css/animations.css",
+        "css/responsive.css"
+      ],
+      "js": [
+        "js/config.js",
+        "js/main.js",
+        "js/slider.js",
+        "js/audio.js",
+        "js/telegram-widget.js",
+        "js/i18n.js",
+        "js/game-links.js"
+      ],
+      "locales": [
+        "locales/hy.json",
+        "locales/ru.json",
+        "locales/en.json"
+      ],
+      "assets": {
+        "images": "assets/images/",
+        "game_images": "assets/images/games/",
+        "icons": "assets/icons/",
+        "audio": "assets/audio/"
+      }
+    }
+  },
+
+"visual_identity": {
+    "brand_name": "YvnBet",
+    "logo_type": "Text-only logo",
+    "logo_rule": "Do not use an image logo or another company logo. Display only the text YvnBet with a premium typographic style.",
+    "colors": {
+      "header": "#9A24AD",
+      "body_background": "#1D052C",
+      "primary_text": "#FFFFFF",
+      "secondary_text": "rgba(255,255,255,0.72)",
+      "accent": "#C77DFF",
+      "accent_light": "#E0AAFF",
+      "gold": "#FFD166",
+      "success": "#28D17C",
+      "danger": "#FF5C75",
+      "card_background": "rgba(255,255,255,0.06)",
+      "card_border": "rgba(255,255,255,0.14)"
+    },
+    "style": [
+      "Modern dark premium design",
+      "Elegant purple and gold color combination",
+      "Glassmorphism cards",
+      "Soft neon glow",
+      "Gradient CTA buttons",
+      "Rounded corners",
+      "Clear visual hierarchy",
+      "Premium but not overloaded interface"
+    ],
+    "icons": {
+      "format": "SVG",
+      "rule": "Use icons for payments, navigation, actions, social links and informational blocks. Do not use emoji characters."
+    }
+  },
+
+"responsive_design": {
+    "supported_devices": [
+      "Desktop",
+      "Laptop",
+      "Tablet",
+      "Mobile phone",
+      "Large screens"
+    ],
+    "breakpoints": {
+      "mobile": "max-width: 575px",
+      "tablet": "576px - 991px",
+      "desktop": "992px - 1439px",
+      "large_desktop": "1440px and above"
+    },
+    "requirements": [
+      "Use mobile-first CSS.",
+      "Prevent horizontal overflow.",
+      "Optimize images for mobile.",
+      "Ensure readable typography on small screens.",
+      "Make buttons touch-friendly.",
+      "Support swipe gestures on mobile slider."
+    ]
+  },
+
+"seo": {
+    "title": {
+      "hy": "YvnBet — Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ",
+      "ru": "YvnBet — Играй уверенно, выигрывай с YVNBET",
+      "en": "YvnBet — Play Confidently, Win with YVNBET"
+    },
+    "meta_description": {
+      "hy": "YvnBet-ի խաղերի, վճարման միջոցների և ծառայությունների ներկայացում։",
+      "ru": "Информация об играх YvnBet, способах оплаты и доступных услугах.",
+      "en": "Information about YvnBet games, payment methods and available services."
+    },
+    "keywords": {
+      "hy": [
+        "YvnBet",
+        "առցանց կազինո",
+        "կազինո խաղեր",
+        "կրիպտո վճարումներ",
+        "USDT կազինո",
+        "LTC կազինո",
+        "DASH կազինո",
+        "SOL կազինո",
+        "ջեքփոթ",
+        "սլոթեր"
+      ],
+      "ru": [
+        "YvnBet",
+        "онлайн казино",
+        "казино игры",
+        "крипто платежи",
+        "USDT казино",
+        "LTC казино",
+        "DASH казино",
+        "SOL казино",
+        "джекпот",
+        "слоты"
+      ],
+      "en": [
+        "YvnBet",
+        "online casino",
+        "casino games",
+        "crypto payments",
+        "USDT casino",
+        "LTC casino",
+        "DASH casino",
+        "SOL casino",
+        "jackpot",
+        "slots"
+      ]
+    }
+  },
+
+"language_system": {
+    "supported_languages": [
+      {
+        "code": "hy",
+        "name": "Հայերեն"
+      },
+      {
+        "code": "ru",
+        "name": "Русский"
+      },
+      {
+        "code": "en",
+        "name": "English"
+      }
+    ],
+    "implementation": [
+      "Store translations in separate JSON locale files.",
+      "Add a compact language switcher in the header.",
+      "Persist selected language in localStorage.",
+      "Do not display promotional text about multilingual support.",
+      "Translate buttons, page titles, slider text, footer links and legal pages."
+    ]
+  },
+
+"header": {
+    "layout": "Sticky responsive header",
+    "left_side": {
+      "element": "Text logo",
+      "content": "YvnBet",
+      "link": "/"
+    },
+    "right_side": {
+      "layout": "Inline buttons on desktop, stacked or compact on mobile",
+      "buttons": [
+        {
+          "id": "login-button",
+          "label": {
+            "hy": "Մուտք",
+            "ru": "Вход",
+            "en": "Login"
+          },
+          "action": "Open login.html"
+        },
+        {
+          "id": "register-button",
+          "label": {
+            "hy": "Գրանցում",
+            "ru": "Регистрация",
+            "en": "Register"
+          },
+          "action": "Open https://t.me/yvnbet"
+        }
+      ],
+      "language_switcher": true
+    }
+  },
+
+"login_page": {
+    "path": "login.html",
+    "provider_url": "https://ggplus.pro",
+    "behavior": [
+      "Display provider site in a full-viewport iframe.",
+      "Use width: 100vw and height: 100vh.",
+      "Remove visible iframe borders.",
+      "Display loading spinner until iframe load event.",
+      "Add fallback button to open the provider in a new browser tab.",
+      "Show a clear message if the provider blocks iframe embedding."
+    ],
+    "technical_note": "Iframe embedding depends on the provider's X-Frame-Options and Content-Security-Policy headers. Do not attempt to bypass these restrictions."
+  },
+
+"registration": {
+    "url": "https://t.me/yvnbet",
+    "description": {
+      "hy": "Գրանցման և օպերատորի հետ կապի համար օգտագործեք Telegram-ը։",
+      "ru": "Для регистрации и связи с оператором используйте Telegram.",
+      "en": "Use Telegram for registration and operator support."
+    }
+  },
+
+"hero_slider": {
+    "autoplay": true,
+    "interval": "6 seconds",
+    "manual_controls": [
+      "Previous and next arrow buttons",
+      "Pagination dots",
+      "Touch swipe",
+      "Keyboard navigation"
+    ],
+    "pause_on_hover": true,
+    "slides": [
+      {
+        "title": {
+          "hy": "+10% բոնուս ամեն լիցքավորման համար",
+          "ru": "+10% бонус на каждое пополнение",
+          "en": "+10% bonus on every deposit"
+        },
+        "image_prompt": "Premium purple and gold casino bonus visual with glowing coins and a large +10% badge"
+      },
+      {
+        "title": {
+          "hy": "Գաղտնիության առաջնահերթություն",
+          "ru": "Приоритет конфиденциальности",
+          "en": "Privacy first"
+        },
+        "image_prompt": "Elegant dark-purple privacy concept with a glowing shield and lock icon"
+      },
+      {
+        "title": {
+          "hy": "Անձնական տվյալների պաշտպանություն",
+          "ru": "Защита персональных данных",
+          "en": "Personal data protection"
+        },
+        "image_prompt": "Modern cybersecurity visual with a luminous padlock and abstract encrypted data"
+      },
+      {
+        "title": {
+          "hy": "Խաղերի մեծ ընտրանի",
+          "ru": "Большой выбор игр",
+          "en": "A wide selection of games"
+        },
+        "image_prompt": "Premium casino games visual with slot reels, cards and purple-gold lighting"
+      }
+    ],
+    "animation": {
+      "css_keyframes": [
+        "slide-fade",
+        "content-fade-up",
+        "glow-pulse",
+        "image-float"
+      ],
+      "requirements": [
+        "Use smooth transitions.",
+        "Avoid excessive motion.",
+        "Respect prefers-reduced-motion."
+      ]
+    }
+  },
+
+"payment_methods": {
+    "title": {
+      "hy": "Լիցքավորման միջոցներ",
+      "ru": "Способы пополнения",
+      "en": "Payment methods"
+    },
+    "methods": [
+      {
+        "name": "USDT",
+        "icon": "assets/icons/usdt.svg"
+      },
+      {
+        "name": "DASH",
+        "icon": "assets/icons/dash.svg"
+      },
+      {
+        "name": "LTC",
+        "icon": "assets/icons/ltc.svg"
+      },
+      {
+        "name": "SOL",
+        "icon": "assets/icons/sol.svg"
+      }
+    ],
+    "withdrawal_methods": [
+      "Any supported cryptocurrency wallet address",
+      "VISA",
+      "Mastercard",
+      "ARCA"
+    ],
+    "visual_style": "Four glassmorphism payment cards with SVG icons, labels and subtle floating animation"
+  },
+
+"advantages": {
+    "section_title": {
+      "hy": "YvnBet-ի առավելությունները",
+      "ru": "Преимущества YvnBet",
+      "en": "YvnBet advantages"
+    },
+    "items": [
+      {
+        "icon": "shield.svg",
+        "title": {
+          "hy": "Գաղտնիության առաջնահերթություն",
+          "ru": "Приоритет конфиденциальности",
+          "en": "Privacy first"
+        },
+        "description": {
+          "hy": "Օգտատերերի տվյալների մշակումը պետք է իրականացվի գործող օրենքներին և հրապարակված գաղտնիության քաղաքականությանը համապատասխան։",
+          "ru": "Обработка данных пользователей осуществляется в соответствии с действующим законодательством и политикой конфиденциальности.",
+          "en": "User data must be processed according to applicable law and the published privacy policy."
+        }
+      },
+      {
+        "icon": "headset.svg",
+        "title": {
+          "hy": "Օպերատորի աջակցություն",
+          "ru": "Поддержка оператора",
+          "en": "Operator support"
+        },
+        "description": {
+          "hy": "Օպերատորը պատրաստ է օգնել ծառայության հետ կապված հարցերում։",
+          "ru": "Оператор готов помочь по вопросам, связанным с сервисом.",
+          "en": "The operator is available to help with service-related questions."
+        }
+      },
+      {
+        "icon": "lock.svg",
+        "title": {
+          "hy": "Գաղտնի գրանցում",
+          "ru": "Конфиденциальная регистрация",
+          "en": "Confidential registration"
+        },
+        "description": {
+          "hy": "Գրանցման գործընթացը կատարվում է Telegram-ի միջոցով։",
+          "ru": "Регистрация осуществляется через Telegram.",
+          "en": "Registration is completed through Telegram."
+        }
+      },
+      {
+        "icon": "bonus.svg",
+        "title": {
+          "hy": "+10% բոնուս",
+          "ru": "+10% бонус",
+          "en": "+10% bonus"
+        },
+        "description": {
+          "hy": "Յուրաքանչյուր դեպոզիտի համար գործում է +10% բոնուս՝ ըստ գործող պայմանների։",
+          "ru": "На каждый депозит действует бонус +10% согласно актуальным условиям.",
+          "en": "A +10% bonus is available for each deposit under the applicable terms."
+        }
+      }
+    ]
+  },
+
+"games_section": {
+    "title": {
+      "hy": "Խաղեր",
+      "ru": "Игры",
+      "en": "Games"
+    },
+    "layout": "Responsive game-card grid",
+    "card_content": [
+      "Game image",
+      "Game name",
+      "Short description",
+      "SVG game-type icon",
+      "Open game button"
+    ],
+    "behavior": "Clicking a game card opens the configured provider game URL.",
+    "configuration": "Store game names, images and URLs in js/config.js.",
+    "fallback": "If a game URL is missing, show an informative unavailable state instead of a broken link."
+  },
+
+"activity_ticker": {
+    "purpose": "Show recent activity only when reliable data is available.",
+    "allowed_modes": [
+      {
+        "mode": "real_api",
+        "description": "Use verified provider API data with permission."
+      },
+      {
+        "mode": "demo",
+        "description": "Use illustrative data only with a visible label such as «Ցուցադրական տվյալներ»."
+      }
+    ],
+    "prohibited": "Do not fabricate player wins or present generated names and amounts as real winnings.",
+    "demo_logic_if_enabled": {
+      "daily_records": 12,
+      "reset_time": "00:00 Europe/Yerevan",
+      "generation": "Generate deterministic daily records from a date-based seed.",
+      "display": "Reveal records gradually during the day, not all at once.",
+      "no_duplicate_names": true,
+      "format": "arm** — 5000 AMD"
+    }
+  },
+
+"telegram_floating_button": {
+    "icon": "assets/icons/telegram.svg",
+    "url": "https://t.me/yvnbet",
+    "initial_position": "right: 24px; bottom: 24px",
+    "behavior": [
+      "Floating animated button with subtle glow and pulse.",
+      "Allow drag in all directions.",
+      "Keep the button inside viewport boundaries.",
+      "Save the last position in localStorage.",
+      "Open Telegram chat on click unless the user is dragging.",
+      "Add aria-label and keyboard focus support."
+    ]
+  },
+
+"audio": {
+    "source": "",
+    "behavior": [
+      "Keep the audio URL empty in config.js for later insertion.",
+      "Loop continuously.",
+      "Provide a visible mute/unmute icon button.",
+      "Remember the user's audio preference in localStorage.",
+      "Respect browser autoplay restrictions.",
+      "If autoplay is blocked, start audio only after the first user interaction.",
+      "Do not show a stop button; use mute/unmute control."
+    ],
+    "file_config": "js/config.js",
+    "accessibility": "Provide an aria-label and tooltip for the audio control."
+  },
+
+"legal_pages": {
+    "rule": "Do not show full rules, terms or partnership details directly on the homepage. Display only clickable footer links that open separate pages.",
+    "terms_page": {
+      "path": "terms.html",
+      "content": [
+        "Before registration, users must read the YvnBet terms.",
+        "Only persons aged 18 or older may register.",
+        "One user may have only one account.",
+        "Multiple accounts may lead to account restriction according to the applicable terms.",
+        "Registration, deposits, withdrawals and operator communication are performed through Telegram.",
+        "Minimum deposit: 1500 AMD.",
+        "Minimum withdrawal: 2000 AMD.",
+        "Maximum daily withdrawal: 200000 AMD.",
+        "Withdrawals may be available to supported cryptocurrency addresses and VISA, Mastercard or ARCA cards, subject to verification and applicable conditions.",
+        "A +10% deposit bonus applies according to the active bonus terms.",
+        "The service is not responsible for issues caused by third-party providers, network failures or unsupported technical environments, except where prohibited by law.",
+        "Abusive or disrespectful communication with the operator may result in service restrictions according to the published rules.",
+        "All legal claims and limitations must be reviewed and approved by a qualified legal professional before publication."
+      ]
+    },
+    "about_page": {
+      "path": "about.html",
+      "content": "A concise description of YvnBet, its service model and contact process without unverified legal or regulatory claims."
+    },
+    "contact_page": {
+      "path": "contact.html",
+      "content": "Contact instructions through Telegram: https://t.me/yvnbet"
+    },
+    "privacy_page": {
+      "path": "privacy.html",
+      "content": "Privacy policy describing data collection, cookies, storage, third-party services and user rights."
+    },
+    "partners_page": {
+      "path": "partners.html",
+      "content": {
+        "hy": "Ունե՞ք ալիք, էջ կամ կայք և ցանկանո՞ւմ եք համագործակցել մեզ հետ։ Ուղարկեք մեզ հաղորդագրություն, և մենք կքննարկենք համագործակցության հնարավոր տարբերակները։",
+        "ru": "У вас есть канал, страница или сайт и вы хотите сотрудничать с нами? Напишите нам, и мы обсудим возможные варианты партнёрства.",
+        "en": "Do you have a channel, page or website and want to work with us? Contact us to discuss potential partnership opportunities."
+      }
+    }
+  },
+
+"footer": {
+    "sections": [
+      {
+        "title": "YvnBet",
+        "items": [
+          "18+ SVG icon",
+          "Խաղա՛ պատասխանատու",
+          "Dynamic current year generated by JavaScript"
+        ]
+      },
+      {
+        "title": "Տեղեկություն",
+        "links": [
+          {
+            "label": "Մեր մասին",
+            "url": "pages/about.html"
+          },
+          {
+            "label": "Կապ մեզ հետ",
+            "url": "pages/contact.html"
+          },
+          {
+            "label": "Պայմաններ և դրույթներ",
+            "url": "pages/terms.html"
+          },
+          {
+            "label": "Գաղտնիության քաղաքականություն",
+            "url": "pages/privacy.html"
+          }
+        ]
+      },
+      {
+        "title": "Գործընկերություն",
+        "links": [
+          {
+            "label": "Գործընկերային ծրագիր",
+            "url": "pages/partners.html"
+          }
+        ]
+      },
+      {
+        "title": "Վճարման միջոցներ",
+        "icons": [
+          "USDT",
+          "DASH",
+          "LTC",
+          "SOL"
+        ]
+      }
+    ],
+    "rule": "Յուրաքանչյուր footer հղում պետք է բացի իր առանձին էջը։"
+  },
+
+"animations": {
+    "required_keyframes": [
+      "fade-in-up",
+      "fade-in",
+      "slide-in",
+      "glow-pulse",
+      "button-shine",
+      "icon-float",
+      "card-hover",
+      "telegram-pulse",
+      "marquee-scroll"
+    ],
+    "rules": [
+      "Use smooth, lightweight animations.",
+      "Do not overload the interface with motion.",
+      "Implement prefers-reduced-motion fallback.",
+      "Avoid animations that negatively affect readability or accessibility."
+    ]
+  },
+
+"security_and_compliance": {
+    "requirements": [
+      "Do not claim guaranteed winnings.",
+      "Do not present fabricated activity as real user activity.",
+      "Do not make unverifiable government, privacy or regulatory claims.",
+      "All payment, bonus and withdrawal information must be verified before publication.",
+      "Add 18+ and responsible-play messaging.",
+      "Use HTTPS for all production links.",
+      "Do not attempt to bypass iframe security headers.",
+      "Do not collect unnecessary personal data."
+    ]
+  },
+
+"acceptance_criteria": [
+    "Header displays text-only YvnBet logo.",
+    "Login button opens the dedicated login page.",
+    "Registration button opens Telegram.",
+    "Slider auto-rotates and supports manual navigation.",
+    "Payment icons are visible under the slider.",
+    "Game cards open configured provider links.",
+    "Telegram floating widget is draggable and clickable.",
+    "Audio control handles autoplay restrictions and looping.",
+    "Footer links open separate pages.",
+    "Footer year updates automatically.",
+    "Website is responsive on desktop, tablet and mobile.",
+    "All CSS and JS are stored in separate files.",
+    "No emojis or unauthorized logos are used.",
+    "No fabricated wins are displayed as genuine.",
+    "Legal and promotional claims are easy to edit from configuration files."
+  ],
+
+"final_output_required": {
+    "deliverables": [
+      "Complete project folder structure",
+      "index.html",
+      "All CSS files",
+      "All JavaScript files",
+      "Three locale JSON files",
+      "Separate legal pages",
+      "SVG icon placeholders",
+      "Generated or placeholder slider visuals",
+      "README with installation and configuration instructions"
+    ],
+    "configuration_placeholders": {
+      "audio_url": "",
+      "telegram_url": "https://t.me/yvnbet",
+      "provider_url": "https://ggplus.pro",
+      "game_links": {},
+      "api_activity_feed_url": ""
+    },
+    "important_note": "Before launch, verify licensing, gambling regulations, payment claims, bonus conditions, privacy wording and the provider's permission to use its website inside an iframe."
+  }
+}
