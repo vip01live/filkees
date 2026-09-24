@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "task": "Կառուցել պրոդակշն-կարգի մի էջանոց կազինո-գովազդային պլատֆորմ՝ YvnBet անվան տակ",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "developer_role": "Կոդը գրի որպես 10+ տարվա փորձ ունեցող senior full-stack developer՝ ձեռքով ստուգված, մոդուլային, մեկնաբանված, production-ready ոճով։ ՈՉ մի էրկին CSS/JS HTML-ի ներսում։",
+    "target_audience": "Հայաստան (հիմնական), ԱՊՀ (երկրորդական)",
+    "languages": {
+      "supported": ["hy", "ru", "en"],
+      "default": "hy",
+      "rule": "Եռալեզու սպասարկումը ԻՐԱԿԱՆԱՑՎԱԾ լինի (header-ում կոճակ-ընտրիչ), բայց կայքում ՈՐՊԵՍ ՏԵՔՍՏ ԵՐԲԵՔ չնշվի («Եռալեզու սպասարկում», «Պրոֆեսիոնալ խաղային հարթակ» և նման արտահայտությունները ԱՐԳԵԼՎԱԾ են)։"
+    }
+  },
+
+"tech_requirements": {
+    "file_structure": {
+      "index.html": "Գլխավոր էջ",
+      "pages/": ["terms.html", "about.html", "contact.html", "privacy.html", "partners.html", "login.html"],
+      "css/": ["css/main.css", "css/animations.css", "css/responsive.css", "css/components.css"],
+      "js/": ["js/config.js", "js/main.js", "js/slider.js", "js/ticker.js", "js/audio.js", "js/telegram-widget.js", "js/i18n.js", "js/guard.js"],
+      "assets/": ["assets/icons/*.svg", "assets/img/*"],
+      "admin/": ["admin/index.html", "admin/admin.js", "admin/admin.css", "admin/auth.js"]
+    },
+    "code_quality": [
+      "Semantic HTML5, BEM անվանակարգ",
+      "Բոլոր անիմացիաները՝ CSS @keyframes-ով (transform/opacity, GPU-friendly, 60fps)",
+      "JS՝ մոդուլային, vanilla, առանց ավելորդ կախվածությունների, event delegation",
+      "Բրաուզերներ՝ Chrome, Firefox, Safari, Edge, Samsung Internet (iOS և Android)",
+      "Accessibility՝ focus states, aria-labels բոլոր icon-կոճակների վրա"
+    ],
+    "ux_guards": {
+      "zoom_disabled": "Pinch-zoom և double-tap-zoom արգելված (viewport meta + JS guard)",
+      "copy_disabled": "Text-select, copy/cut/contextmenu արգելված ամբողջ կայքում, ԲԱՑԱՌՈՒԹՅԱՄԲ՝ իրավական էջերում (Terms, Privacy, Contact, About)",
+      "images": "Drag-out պաշտպանված"
+    },
+    "responsive": {
+      "breakpoints_px": [576, 992, 1440],
+      "devices": ["PC", "սմարթֆոն", "պլանշետ", "խոշոր մոնիտոր"]
+    }
+  },
+
+"design": {
+    "colors": {
+      "header": "#9A24AD",
+      "body_bg": "#1D052C",
+      "accents": ["#C77DFF", "#E0AAFF", "#FFD60A (CTA շեշտ)"],
+      "style": "Ժամանակակից dark-theme կազինո էսթետիկա՝ glassmorphism քարտեր, glow էֆեկտներ, gradient կոճակներ, հարթ hover/transition"
+    },
+    "logo": {
+      "rule": "ՊԱՏԿԵՐ-լոգո ՉԼԻՆԻ։ Միայն տեքստային wordmark՝ «YvnBet»՝ շքեղ տառատեսակով, ենթագիծ (subtle) shimmer animation-ով hover-ին։"
+    },
+    "icons": {
+      "rule": "Ամեն ինչ՝ SVG icon-ներով։ ԷՄՈՋԻՆԵՐ ԱՐԳԵԼՎԱԾ ԵՆ ամբողջ կայքում։"
+    }
+  },
+
+"seo": {
+    "meta_title": "YvnBet — Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ",
+    "meta_keywords": "Հայերեն, ռուսերեն և անգլերեն keywords՝ որոնման համար հեշտ գտնելիության նպատակով (կազինո, խաղեր, բոնուս, լիցքավորում, կրիպտո)",
+    "meta_description": "hy/ru/en երեք տարբերակով",
+    "og_tags": true
+  },
+
+"header": {
+    "left": "YvnBet տեքստային լոգո",
+    "right": {
+      "buttons": [
+        {
+          "label": "Մուտք",
+          "behavior": "Բացում է /login էջը, որտեղ provider-ի կայքը՝ https://ggplus.pro — բացվում է IFRAME-ով, ԼՐԻՎ չափսերով (100vw/100vh), սովորական կայքի տեսքով, մեր դոմեյնի տակ։ Անհրաժեշտ է՝ loading spinner overlay, provider-ի կողմից embedding-ը արգելելու դեպքում սեղանի համար տեղավորող («Բացել նոր պատուհանում») ֆոլբեք, ճիշտ back-button վարքագիծ։"
+        },
+        {
+          "label": "Գրանցում",
+          "behavior": "Redirect → https://t.me/yvnbet (Telegram օպերատորի չաթ)"
+        }
+      ]
+    },
+    "language_switcher": "Համաչափ, նրբագեղ HY/RU/EN ընտրիչ՝ առանց գովազդային տեքստի"
+  },
+
+"hero_slider": {
+    "behavior": "Ավտոմատ պտտվող slider (‾6վ), ՁԵՌՔՈՎ թերթվող (touch-swipe), սլաքներ + dots, keyboard-հասանելի, pause on hover",
+    "slides": [
+      {"title_hy": "+10% բոնուս ամեն լիցքավորումի համար", "image": "գեներացված գրաֆիկա՝ մետաղադրամներ/բոնուս, մանուշակագույն-ոսկե թեմա"},
+      {"title_hy": "ԴԱՀԿ-ն չի վերահսկում ձեզ", "image": "գեներացված գրաֆիկա՝ վահան/ազատություն հայեցակարգ"},
+      {"title_hy": "100% գաղտնիություն", "image": "գեներացված գրաֆիկա՝ կողպեղ/անանուն հայեցակարգ"},
+      {"title_hy": "Շահելու մեծ հնարավորություն", "image": "գեներացված գրաֆիկա՝ ջեքփոթ/փայլող շահումներ"}
+    ],
+    "transition": "Սահուն crossfade/slide keyframes-ով",
+    "below_slider": {
+      "payment_icons": ["USDT", "LTC", "DASH", "SOL"],
+      "style": "SVG մետաղադրամի icon-ներ՝ նուրբ float անիմացիայով, tooltip-ով"
+    }
+  },
+
+"games_section": {
+    "layout": "Responsive քարտ-ցանց (cover, անվանում, «Play» overlay hover-ին, card tilt effect)",
+    "click_behavior": "Քարտին սեղմելիս բացվում է ՀԵՏ ԽԱՂԸ՝ provider-ի deep-link-ով (ggplus.pro + խաղի ուղին, կարգավորվում է config.js-ում)",
+    "data_source": "Խաղերի ցանկը կառավարվում է admin panel-ից (տես admin_panel)"
+  },
+
+"winners_ticker": {
+    "compliance_note": "ԿԱՐԵՒՐ ՊԱՀԱՆՑԻՔ՝ այս ֆիդը պետք է ցուցադրի provider-ի API-ից ՍՏՈՒԳԱՐԱԿԱՆ տվյալներ, ԿԱՄ հակիճ պիտակավորվի որպես ցուցադրական/օրինակելի (demo)։ Հորինված շահումները իրական խաղացողների շահումների տեսքով ներկայացնելը չի իրագործվի։",
+    "mode": "config.js-ում ռեժիմի դրոշակ՝ 'api' (իրական ֆիդ) | 'demo' (հակիճ «Ցուցադրական ցանկ» նշումով)",
+    "demo_logic": {
+      "per_day": 12,
+      "reset": "00:00-ին նոր ցանկ, հաջորդ 00:00-ը մինչև",
+      "reveal": "Հերթականությամբ, ոչ միանգամից (ներկայացման հաճելի ռիթմ), ներկայացումից առաջ ստուգվում է անունների չկրկնվելը",
+      "format": "arm** — 5000 AMD, Tik*** — 2000 AMD, Hov*** — 67000 AMD",
+      "style": "Թերթվող/սահող մարquee տող՝ մետաքսանման անիմացիայով"
+    }
+  },
+
+"telegram_floating_button": {
+    "position": "Նախնական՝ աջ ստորին անկյուն",
+    "features": [
+      "Draggable՝ օգտագործողը քաշում է ձախ-աջ, վերև-ներքև, որտեղ ուզում է այնտեղ թողնում (սահմաններից դուրս չի ընկնում, localStorage-ում
