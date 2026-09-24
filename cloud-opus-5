@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "task": "Build a complete, production-ready multi-page casino affiliate landing platform",
+    "site_name": "YvnBet",
+    "slogan": "Խաղա՛ վստահ, հաղթի՛ր YVNBET-ի հետ։",
+    "role": "Act as a senior full-stack web developer with 10+ years of experience building premium gambling/entertainment platforms. Code must read as hand-crafted, production-grade work: clean, modular, commented, zero inline styles/scripts in HTML.",
+    "audience": "Visitors from Armenia (primary), CIS (secondary)",
+    "languages": {
+      "supported": ["hy", "ru", "en"],
+      "default": "hy",
+      "note": "Full tri-lingual support must be IMPLEMENTED (language switcher in header), but MUST NOT be advertised as text on the site (no 'Եռալեզու սպասարկում' copy anywhere)."
+    }
+  },
+
+"tech_requirements": {
+    "file_structure": {
+      "root": "index.html",
+      "css": ["css/style.css", "css/animations.css", "css/responsive.css"],
+      "js": ["js/main.js", "js/slider.js", "js/ticker.js", "js/audio.js", "js/drag-telegram.js", "js/i18n.js", "js/config.js"],
+      "admin": ["admin/index.html", "admin/admin.js", "admin/admin.css"],
+      "rule": "STRICTLY no inline CSS/JS inside HTML files. Every concern in its own file."
+    },
+    "code_quality": [
+      "Semantic HTML5, BEM naming convention for CSS classes",
+      "CSS keyframes-based animations (smooth, GPU-friendly: transform/opacity only)",
+      "JS: modular, event-delegated, requestAnimationFrame where appropriate, no frameworks required (vanilla preferred) unless justified",
+      "Cross-browser: Chrome, Firefox, Safari, Edge, Samsung Internet; iOS & Android",
+      "Accessibility: focus states, aria-labels on all icon buttons"
+    ],
+    "responsive": {
+      "breakpoints": ["mobile < 576px", "tablet 576-992px", "desktop > 992px", "large > 1440px"],
+      "rule": "Pixel-perfect adaptation for PC, smartphone, tablet, smart TV browsers"
+    },
+    "security_ux": [
+      "Disable pinch zoom and double-tap zoom (viewport meta + JS guard)",
+      "Disable text selection and copy (user-select: none, copy/cut/contextmenu prevented) except inside legal pages (Terms, Privacy, Contact)",
+      "Images protected from drag-out"
+    ]
+  },
+
+"design": {
+    "palette": {
+      "header": "#9A24AD",
+      "body_background": "#1D052C",
+      "accent_suggested": ["#C77DFF", "#E0AAFF", "#FFD60A for CTA highlights"],
+      "style": "Modern dark-theme casino aesthetic, glassmorphism cards, subtle glow effects, gradient buttons, smooth hover states"
+    },
+    "logo": {
+      "type": "TEXT-ONLY wordmark 'YvnBet'",
+      "note": "NO image logo. Craft a stylish custom lettering treatment (e.g., 'Yvn' in white + 'Bet' in accent gradient), premium font pairing, subtle shimmer animation on hover."
+    },
+    "icons": "ALL icons must be SVG (inline-sprite or /assets/icons/*.svg). ZERO emojis anywhere on the site.",
+    "animation_style": "CSS keyframes: fadeInUp on scroll-reveal sections, pulsing CTA buttons, glowing borders, card tilt-on-hover, smooth slider transitions"
+  },
+
+"header": {
+    "left": "YvnBet text logo",
+    "right_buttons": {
+      "login_button": {
+        "label_hy": "Մուտք",
+        "behavior": "Opens the provider site https://ggplus.pro inside a FULL-SCREEN iframe served under our own domain (e.g., /login route or play.yvnbet domain). Must look/feel like a normal site page: full viewport width/height, no visible iframe borders, loading spinner overlay while iframe loads, graceful fallback ('Open in new tab') if provider blocks embedding. History/URL managed so back button works correctly."
+      },
+      "register_button": {
+        "label_hy": "Գրանցում",
+        "behavior": "Opens Telegram operator chat: https://t.me/yvnbet"
+      }
+    },
+    "also": "Compact language switcher (HY/RU/EN) — small, elegant, no promotional text"
+  },
+
+"hero_section": {
+    "slider": {
+      "type": "Auto-rotating carousel, ALSO manually swipeable (touch) and navigable (arrows + dots)",
+      "slides": [
+        {"title_hy": "+10% բոնուս ամեն լիցքավորման համար", "visual": "generated premium graphic: coins/bonus chips with purple-gold theme"},
+        {"title_hy": "ԴԱՀԿ-ն չի վերահսկում ձեզ", "visual": "generated graphic: shield/freedom concept"},
+        {"title_hy": "100% գաղտնիություն", "visual": "generated graphic: lock/anonymous concept"},
+        {"title_hy": "Շահելու մեծ հնարավորություն", "visual": "generated graphic: jackpot/sparkling winnings concept"}
+      ],
+      "implementation": "Transition: smooth crossfade/slide, autoplay ~6s with pause on hover/touch, keyboard accessible"
+    },
+    "below_slider": {
+      "payment_icons": ["LTC", "DASH", "SOL", "USDT"],
+      "note": "Official-style SVG coin icons with subtle float animation, each with tooltip 'Ընդունում ենք՝ LTC' etc."
+    }
+  },
+
+"games_section": {
+    "layout": "Responsive grid of game cards (cover image, game name, provider tag, 'Play' overlay on hover)",
+    "behavior": "Clicking a card opens that specific game via provider deep-link (https://ggplus.pro + game path, configurable in config.js)",
+    "data": "Games list fully manageable from admin panel (see admin_panel)"
+  },
+
+"live_winners_ticker": {
+    "compliance_note": "CRITICAL: This feed must show REAL data from the provider API, OR be explicitly labeled as illustrative/demo. Do NOT present fabricated wins as genuine player wins.",
+    "mode_a_real_feed
